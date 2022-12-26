@@ -1,0 +1,3 @@
+# are you a modder who wants this mod to be compatible with your mod that allows for more than the default 7 traditions?
+# just override this variable in your mod and everything with Just Work™
+@assimilate_all_the_things_tradition_categories_max = 7

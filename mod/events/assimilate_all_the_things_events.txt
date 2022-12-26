@@ -1,0 +1,15 @@
+namespace = assimilate_all_the_things
+
+# flag mod as active
+# triggered by on_game_start and on_single_player_save_game_load
+event = {
+	id = assimilate_all_the_things.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = assimilate_all_the_things_installed }
+	}
+	immediate = {
+		set_global_flag = assimilate_all_the_things_installed
+	}
+}
