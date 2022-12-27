@@ -1,0 +1,147 @@
+namespace = utopia
+
+# Modified:
+# * allow Psionic Pops to gain Cybernetic
+# * Cybernetic traits now handled by Leader Traits: All Eligible Species Traits
+# * do not set the dominant species if it is robotic
+country_event = {
+	id = utopia.2501
+	title = utopia.2501.name
+	desc = utopia.2501.desc
+	picture = GFX_evt_cybernetics
+	show_sound = event_the_flesh_is_weak
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = cyborg_empire
+		if = {
+			limit = {
+				owner_species = {
+					is_robotic = no
+					NOT = { has_trait = trait_cybernetic }
+				}
+				any_owned_pop_species = { is_exact_same_species = root.owner_species }
+			}
+			random_owned_pop_species = {
+				limit = { is_exact_same_species = root.owner_species }
+				aatp_prepare_cybernetic_species = yes
+			}
+		}
+		else = {
+			random_owned_pop_species = {
+				limit = {
+					is_same_species = root.owner_species
+					is_robotic = no
+					NOT = { has_trait = trait_cybernetic }
+				}
+				aatp_prepare_cybernetic_species = yes
+			}
+		}
+		event_target:prepared_species = { save_event_target_as = cybernetic_species }
+		every_owned_pop_species = {
+			limit = {
+				NOT = { has_trait = trait_cybernetic }
+				is_robotic = no
+			}
+			aatp_prepare_cybernetic_species = yes
+			aatp_convert_species = yes
+		}
+		# catches colony ships/armies/leaders whose species the owner does not have any Pops
+		every_controlled_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				species = {
+					NOT = { has_trait = trait_cybernetic }
+					is_robotic = no
+				}
+			}
+			aatp_prepare_cybernetic_species = yes
+			change_species = event_target:prepared_species
+		}
+		every_owned_army = {
+			limit = {
+				exists = species
+				species = {
+					NOT = { has_trait = trait_cybernetic }
+					is_robotic = no
+				}
+			}
+			aatp_prepare_cybernetic_species = yes
+			change_species = event_target:prepared_species
+		}
+		every_owned_leader = {
+			limit = {
+				species = {
+					NOT = { has_trait = trait_cybernetic }
+					is_robotic = no
+				}
+			}
+			save_event_target_as = previous_leader_species
+			aatp_prepare_cybernetic_species = yes
+			change_species = event_target:prepared_species
+			fire_on_action = {
+				on_action = on_leader_species_changed
+				scopes = {
+					from = event_target:previous_leader_species
+				}
+			}
+		}
+		every_pool_leader = {
+			limit = {
+				species = {
+					NOT = { has_trait = trait_cybernetic }
+					is_robotic = no
+				}
+			}
+			save_event_target_as = previous_leader_species
+			aatp_prepare_cybernetic_species = yes
+			change_species = event_target:prepared_species
+			fire_on_action = {
+				on_action = on_leader_species_changed
+				scopes = {
+					from = event_target:previous_leader_species
+				}
+			}
+		}
+		every_envoy = {
+			limit = {
+				species = {
+					NOT = { has_trait = trait_cybernetic }
+					is_robotic = no
+				}
+			}
+			save_event_target_as = previous_leader_species
+			aatp_prepare_cybernetic_species = yes
+			change_species = event_target:prepared_species
+			fire_on_action = {
+				on_action = on_leader_species_changed
+				scopes = {
+					from = event_target:previous_leader_species
+				}
+			}
+		}
+		if = {
+			limit = { owner_species = { is_robotic = no } }
+			change_dominant_species = { species = event_target:cybernetic_species }
+		}
+		# note: cybernetic leader traits are added by Leader Traits: All Eligible Species Traits
+
+		observer_event = {
+			id = observer.55
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+				NOT = { is_same_value = root }
+				has_communications = root
+			}
+			country_event = {
+				id = utopia.2505
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = utopia.2501.a
+	}
+}
