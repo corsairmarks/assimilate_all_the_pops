@@ -1,4 +1,4 @@
-name="Assimilate All the Things"
+name="Assimilate All the Pops"
 dependencies={
 	"Deassimilate Machines"
 }
