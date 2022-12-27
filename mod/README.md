@@ -2,29 +2,29 @@
 
 Do you want to assimilate all your Pops in all the ways? Then this mod is for you!
 
-Regular empires can select any or all of: Synthetic Evolution, The Flesh is Weak, Mind Over Matter, and/or Engineered Evolution.  Driven Assimilator machine empires can select either or both: Organo-Machine Interfacing and Synthetic Age. Hive-minded empires can select either or both: Organo-Machine Interfacing and Engineered Evolution.
+Regular empires can select any or all of: Synthetic Evolution, The Flesh is Weak, Mind Over Matter, and/or Engineered Evolution. Driven Assimilator machine empires can select either or both: Organo-Machine Interfacing and Synthetic Age. Hive-minded empires can select either or both: Organo-Machine Interfacing and Engineered Evolution.
 
 You'll have all the corresponding assimilation types available to your empire, but they must be applied one-at-a-time.
 
 # Changes
 
-Allows regular empires to select Synthetic Evolution, The Flesh is Weak, Mind Over Matter, and/or Engineered Evolution.  Allows Driven Assimilator machine empires to select both Organo-Machine Interfacing and Synthetic Age. Allows hive-minded empires to select both Organo-Machine Interfacing and Engineered Evolution.
+Allows regular empires to select Synthetic Evolution, The Flesh is Weak, Mind Over Matter, and/or Engineered Evolution. Allows Driven Assimilator machine empires to select both Organo-Machine Interfacing and Synthetic Age. Allows hive-minded empires to select both Organo-Machine Interfacing and Engineered Evolution. Also allows selecting the relevant ascension path traditions in combination with one-another.
 
 Disables the "remove psionic" and "remove cybernetic" versions of the assimilation living standards. The game objects still exist, but they are no longer allowed for use (and the game should switch ongoing assimilations to the non-trait-specific version due to weight changes).
 
 ## Compatibility
 
-This mod overrides the seven ascension path-related ascension perks. It is not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution.
+This mod overrides the seven ascension path-related ascension perks. It is not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. It is also not compatible with mods that adjust the Synthetics, Cybernatics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible).
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
 ### Not Included in "Subtle Polish"
 
-This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089) because it contains a significant gameplay change.  It is otherwise fully compatible.
+This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089) because it contains a significant gameplay change. It is otherwise fully compatible.
 
 ### When to Install
 
-This mod can be added before or during a game.  The new rules for allowing multiple "ascension path" ascension perks will take effect immediately, even for empires which have already chosen an ascension path. It is not recommended to remove during a game, as it could cause problems that have selected multiple ascension perks which are incompatible without this mod.  Always back up your savegame before trying to remove a mod.
+This mod can be added before or during a game. The new rules for allowing multiple "ascension path" ascension perks will take effect immediately, even for empires which have already chosen an ascension path. It is not recommended to remove during a game, as it could cause problems that have selected multiple ascension perks which are incompatible without this mod. Always back up your savegame before trying to remove a mod.
 
 ### Required Mod Dependencies
 
@@ -38,26 +38,26 @@ This mod can be added before or during a game.  The new rules for allowing multi
 
 ### Known Issues
 
-This mod overrides seven ascension perks and ten living standards from the base game.  Expect to see seventeen lines in error.log like this:
+This mod overrides seven ascension perks and ten living standards from the base game. Expect to see seventeen lines in error.log like this:
 
 ```
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_deassimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 9
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_ego_assimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 42
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_ego_assimilation_psionic already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 92
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_ego_assimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 130
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_ego_assimilation_psionic already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 187
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_tech_assimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 222
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_assimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 270
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_assimilation_psionic already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 310
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_psi_assimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 340
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_psi_assimilation_cyborg already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 377
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_engineered_evolution already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 2
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_the_flesh_is_weak already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 50
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_organo_machine_interfacing already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 87
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_organo_machine_interfacing_assimilator already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 121
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_synthetic_evolution already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 158
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_mind_over_matter already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 234
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_synthetic_age already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 279
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_deassimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 9
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_ego_assimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 42
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_ego_assimilation_psionic already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 92
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_ego_assimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 130
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_ego_assimilation_psionic already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 187
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_tech_assimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 222
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_assimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 270
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_assimilation_psionic already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 310
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_psi_assimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 340
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_psi_assimilation_cyborg already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 377
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_engineered_evolution already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 2
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_the_flesh_is_weak already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 50
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_organo_machine_interfacing already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 87
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_organo_machine_interfacing_assimilator already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 121
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_synthetic_evolution already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 158
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_mind_over_matter already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 234
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_synthetic_age already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 279
 ```
 
 ## Changelog
@@ -70,4 +70,4 @@ Hosted on [GitHub](https://github.com/corsairmarks/assimilate_all_the_pops)
 
 ### Development Notes
 
-It is best to clone this repository into `<Stellaris User's Directory>/Paradox Interactive/Stellaris/mod`, and then make a connection to the `mod` folder via a `*.mod` file's `path` property.  That will ensure the game can see the files, and also that CWTools will parse them.  Also note that the README.md file exists in the `mod` directory but is symbolically linked in the root directory.
+It is best to clone this repository into `<Stellaris User's Directory>/Paradox Interactive/Stellaris/mod`, and then make a connection to the `mod` folder via a `*.mod` file's `path` property. That will ensure the game can see the files, and also that CWTools will parse them. Also note that the README.md file exists in the `mod` directory but is symbolically linked in the root directory.
