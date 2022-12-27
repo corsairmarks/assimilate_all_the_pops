@@ -1,10 +1,16 @@
 # Overview
 
-Summary
+Do you want to assimilate all your Pops in all the ways? Then this mod is for you!
+
+Regular empires can select any or all of: Synthetic Evolution, The Flesh is Weak, Mind Over Matter, and/or Engineered Evolution.  Driven Assimilator machine empires can select either or both: Organo-Machine Interfacing and Synthetic Age. Hive-minded empires can select either or both: Organo-Machine Interfacing and Engineered Evolution.
+
+You'll have all the corresponding assimilation types available to your empire, but they must be applied one-at-a-time.
 
 # Changes
 
 Allows regular empires to select Synthetic Evolution, The Flesh is Weak, Mind Over Matter, and/or Engineered Evolution.  Allows Driven Assimilator machine empires to select both Organo-Machine Interfacing and Synthetic Age. Allows hive-minded empires to select both Organo-Machine Interfacing and Engineered Evolution.
+
+Disables the "remove psionic" and "remove cybernetic" versions of the assimilation living standards. The game objects still exist, but they are no longer allowed for use (and the game should switch ongoing assimilations to the non-trait-specific version due to weight changes).
 
 ## Compatibility
 
@@ -22,7 +28,7 @@ This mod can be added before or during a game.  The new rules for allowing multi
 
 ### Required Mod Dependencies
 
-[Deassimilate Machines](https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372) contains all the changes to the Assimilation citizenship type as assimilation process required to support multiple assimilation types in one empire.
+[Deassimilate Machines](https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372) contains all the changes to the Assimilation citizenship type and assimilation process required to support multiple assimilation types in one empire.
 
 ### Recommended Companion Mods
 
@@ -32,7 +38,7 @@ This mod can be added before or during a game.  The new rules for allowing multi
 
 ### Known Issues
 
-This mod overrides seven ascension perks from the base game.  Expect to see seven lines in error.log like this:
+This mod overrides seven ascension perks and ten living standards from the base game.  Expect to see seventeen lines in error.log like this:
 
 ```
 
