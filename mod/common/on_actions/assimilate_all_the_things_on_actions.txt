@@ -1,13 +1,13 @@
 # fired when the game starts
 on_game_start = {
 	events = {
-		assimilate_all_the_things.13 # flag mod as installed
+		assimilate_all_the_pops.13 # flag mod as installed
 	}
 }
 
 # fired when loading a single-player game
 on_single_player_save_game_load = {
 	events = {
-		assimilate_all_the_things.13 # flag mod as installed
+		assimilate_all_the_pops.13 # flag mod as installed
 	}
 }
