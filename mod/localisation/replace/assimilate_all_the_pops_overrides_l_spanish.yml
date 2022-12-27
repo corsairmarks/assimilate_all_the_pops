@@ -1,7 +1,7 @@
 ﻿l_spanish:
- living_standard_ego_assimilation_hive: "Sublimación de la identidad ($trait_hive_mind$)"
+ living_standard_ego_assimilation: "Sublimación de la identidad ($trait_hive_mind$)"
  living_standard_cyborg_ego_assimilation: "Sublimación de la identidad ($trait_cybernetic$)"
  living_standard_cyborg_ego_assimilation_psionic: "$living_standard_cyborg_ego_assimilation$"
- living_standard_tech_assimilation_synthetic: "Síntesis de transmutación ($trait_robotic_3$)"
+ living_standard_tech_assimilation: "Síntesis de transmutación ($trait_robotic_3$)"
  living_standard_cyborg_assimilation: "Síntesis de transmutación ($trait_cybernetic$)"
  living_standard_cyborg_assimilation_psionic: "$living_standard_cyborg_assimilation$"
