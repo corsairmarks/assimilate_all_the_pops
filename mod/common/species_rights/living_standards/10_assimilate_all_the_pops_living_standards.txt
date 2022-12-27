@@ -284,8 +284,7 @@ living_standard_tech_assimilation = {
 
 # Modified:
 # * use triggers
-# * potential for psionic species
-# * disallow cybernetic species
+# * potential for psionic species, non-cybernetic species
 # * weighted higher if already living_standard_cyborg_assimilation_psionic
 living_standard_cyborg_assimilation = {
 	pop_modifier = {
@@ -295,6 +294,7 @@ living_standard_cyborg_assimilation = {
 	potential = {
 		has_utopia = yes
 		is_robotic = no
+		NOT = { has_trait = trait_cybernetic }
 		exists = from
 		from = {
 			is_hive_empire = no
@@ -303,7 +303,6 @@ living_standard_cyborg_assimilation = {
 	}
 
 	allow = {
-		NOT = { has_trait = trait_cybernetic }
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
 			fail_text = SPECIES_MUST_BE_ASSIMILATING
