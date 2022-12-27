@@ -40,51 +40,53 @@ aatp_prepare_cybernetic_species = {
 aatp_convert_species = {
 	optimize_memory
 	save_event_target_as = previous_species
-	every_owned_pop = {
-		limit = { is_exact_same_species = prev }
-		change_species = event_target:prepared_species
-	}
-	every_owned_army = {
-		limit = {
-			exists = species
-			is_exact_same_species = prev
+	prev = {
+		every_owned_pop = {
+			limit = { is_exact_same_species = prevprev }
+			change_species = event_target:prepared_species
 		}
-		change_species = event_target:prepared_species
-	}
-	every_controlled_ship = {
-		limit = {
-			is_ship_class = shipclass_colonizer
-			is_exact_same_species = prev
+		every_owned_army = {
+			limit = {
+				exists = species
+				is_exact_same_species = prevprev
+			}
+			change_species = event_target:prepared_species
 		}
-		change_species = event_target:prepared_species
-	}
-	every_owned_leader = {
-		limit = { is_exact_same_species = prev }
-		change_species = event_target:prepared_species
-		fire_on_action = {
-			on_action = on_leader_species_changed
-			scopes = {
-				from = event_target:previous_species
+		every_controlled_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				is_exact_same_species = prevprev
+			}
+			change_species = event_target:prepared_species
+		}
+		every_owned_leader = {
+			limit = { is_exact_same_species = prevprev }
+			change_species = event_target:prepared_species
+			fire_on_action = {
+				on_action = on_leader_species_changed
+				scopes = {
+					from = event_target:previous_species
+				}
 			}
 		}
-	}
-	every_pool_leader = {
-		limit = { is_exact_same_species = prev }
-		change_species = event_target:prepared_species
-		fire_on_action = {
-			on_action = on_leader_species_changed
-			scopes = {
-				from = event_target:previous_species
+		every_pool_leader = {
+			limit = { is_exact_same_species = prevprev }
+			change_species = event_target:prepared_species
+			fire_on_action = {
+				on_action = on_leader_species_changed
+				scopes = {
+					from = event_target:previous_species
+				}
 			}
 		}
-	}
-	every_envoy = {
-		limit = { is_exact_same_species = prev }
-		change_species = event_target:prepared_species
-		fire_on_action = {
-			on_action = on_leader_species_changed
-			scopes = {
-				from = event_target:previous_species
+		every_envoy = {
+			limit = { is_exact_same_species = prevprev }
+			change_species = event_target:prepared_species
+			fire_on_action = {
+				on_action = on_leader_species_changed
+				scopes = {
+					from = event_target:previous_species
+				}
 			}
 		}
 	}
