@@ -5,14 +5,18 @@
 # 	pop_happiness = 0.15
 # }
 
-# Modified: use triggers
+# Modified:
+# * use triggers
+# * potential non-robotic
+# * potential hive-minded
 living_standard_deassimilation = {
-	pop_modifier = {}
+	pop_modifier = { }
 
 	potential = {
 		has_utopia = yes
-		exists = from
+		is_robotic = no
 		has_trait = trait_hive_mind
+		exists = from
 		from = {
 			is_gestalt = no
 			has_tradition = tr_genetics_creation
@@ -35,7 +39,9 @@ living_standard_deassimilation = {
 	}
 }
 
-# Modified: use triggers
+# Modified:
+# * use triggers
+# * potential non-hive-minded
 living_standard_ego_assimilation = {
 	in_breach_of = {
 		{
@@ -53,48 +59,7 @@ living_standard_ego_assimilation = {
 	potential = {
 		has_psionic_species_trait = no
 		is_robotic = no
-		exists = from
-		from = {
-			is_hive_empire = yes
-			NOT = { has_civic = civic_hive_devouring_swarm }
-			has_tradition = tr_genetics_creation
-		}
-	}
-
-	allow = {
-		hidden_trigger = { exists = from }
-		custom_tooltip = {
-			fail_text = SPECIES_MUST_BE_ASSIMILATING
-			has_citizenship_type = {
-				type = citizenship_assimilation
-				country = from
-			}
-		}
-	}
-
-	ai_will_do = {
-		factor = 100
-	}
-}
-
-# Modified: use triggers
-living_standard_ego_assimilation_psionic = {
-	in_breach_of = {
-		{
-			trigger = {
-				is_gestalt = yes
-			}
-			key = resolution_greatergood_universal_prosperity_mandate
-		}
-	}
-
-	pop_modifier = {
-		pop_happiness = -0.50
-	}
-
-	potential = {
-		has_psionic_species_trait = yes
-		is_robotic = no
+		NOT = { has_trait = trait_hive_mind }
 		exists = from
 		from = {
 			is_hive_empire = yes
@@ -121,7 +86,52 @@ living_standard_ego_assimilation_psionic = {
 
 # Modified:
 # * use triggers
-# * allow psionic species
+# * potetnial non-hive-minded
+living_standard_ego_assimilation_psionic = {
+	in_breach_of = {
+		{
+			trigger = {
+				is_gestalt = yes
+			}
+			key = resolution_greatergood_universal_prosperity_mandate
+		}
+	}
+
+	pop_modifier = {
+		pop_happiness = -0.50
+	}
+
+	potential = {
+		has_psionic_species_trait = yes
+		is_robotic = no
+		NOT = { has_trait = trait_hive_mind }
+		exists = from
+		from = {
+			is_hive_empire = yes
+			NOT = { has_civic = civic_hive_devouring_swarm }
+			has_tradition = tr_genetics_creation
+		}
+	}
+
+	allow = {
+		hidden_trigger = { exists = from }
+		custom_tooltip = {
+			fail_text = SPECIES_MUST_BE_ASSIMILATING
+			has_citizenship_type = {
+				type = citizenship_assimilation
+				country = from
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+# Modified:
+# * use triggers
+# * potential for psionic species, empire-type-specific checks
 # * weighted higher if already living_standard_cyborg_ego_assimilation_psionic
 living_standard_cyborg_ego_assimilation = {
 	in_breach_of = {
@@ -146,6 +156,12 @@ living_standard_cyborg_ego_assimilation = {
 					is_hive_empire = yes
 					NOT = { has_civic = civic_hive_devouring_swarm }
 					has_tradition = tr_cybernetics_transubstantiation_synthesis
+					prev = {
+						NAND = {
+							has_trait = trait_hive_mind
+							has_trait = trait_cybernetic
+						}
+					}
 				}
 				AND = {
 					has_valid_civic = civic_machine_assimilator
@@ -214,7 +230,10 @@ living_standard_cyborg_ego_assimilation_psionic = {
 	}
 }
 
-# Modified: use triggers
+# Modified:
+# * use triggers
+# * potential if and only if not the empire's dominant species (which is what synth assimilation turns things into)
+# * potential non-hive-mind for non-machine empires
 living_standard_tech_assimilation = {
 	pop_modifier = {
 		pop_happiness = -0.25
@@ -226,6 +245,7 @@ living_standard_tech_assimilation = {
 			has_synthethic_dawn = yes
 		}
 		exists = from
+		NOT = { is_exact_same_species = from.owner_species }
 		from = {
 			OR = {
 				AND = {
@@ -238,7 +258,10 @@ living_standard_tech_assimilation = {
 						}
 					}
 				}
-				has_country_flag = synthetic_empire
+				AND = {
+					has_country_flag = synthetic_empire
+					prev = { NOT = { has_trait = trait_hive_mind } }
+				}
 			}
 		}
 	}
@@ -261,7 +284,8 @@ living_standard_tech_assimilation = {
 
 # Modified:
 # * use triggers
-# * allow psionic species
+# * potential for psionic species
+# * disallow cybernetic species
 # * weighted higher if already living_standard_cyborg_assimilation_psionic
 living_standard_cyborg_assimilation = {
 	pop_modifier = {
@@ -279,6 +303,7 @@ living_standard_cyborg_assimilation = {
 	}
 
 	allow = {
+		NOT = { has_trait = trait_cybernetic }
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
 			fail_text = SPECIES_MUST_BE_ASSIMILATING
@@ -330,8 +355,8 @@ living_standard_cyborg_assimilation_psionic = {
 
 # Modified:
 # * use triggers
-# * allow cybernetic species
-# * disallow fully-psionic species
+# * potential for cybernetic species
+# * no potential for robotic species or fully-psionic species
 # * weighted higher if already living_standard_psi_assimilation_cyborg
 living_standard_psi_assimilation = {
 	pop_modifier = {
@@ -340,6 +365,7 @@ living_standard_psi_assimilation = {
 
 	potential = {
 		has_utopia = yes
+		is_robotic = no
 		NOT = { has_trait = trait_psionic }
 		exists = from
 		from = { has_tradition = tr_psionics_psionic_assimilation }
