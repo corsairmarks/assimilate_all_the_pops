@@ -41,7 +41,23 @@ This mod can be added before or during a game.  The new rules for allowing multi
 This mod overrides seven ascension perks and ten living standards from the base game.  Expect to see seventeen lines in error.log like this:
 
 ```
-
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_deassimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 9
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_ego_assimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 42
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_ego_assimilation_psionic already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 92
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_ego_assimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 130
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_ego_assimilation_psionic already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 187
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_tech_assimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 222
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_assimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 270
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_assimilation_psionic already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 310
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_psi_assimilation already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 340
+[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_psi_assimilation_cyborg already exists, using the one at  file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 377
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_engineered_evolution already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 2
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_the_flesh_is_weak already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 50
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_organo_machine_interfacing already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 87
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_organo_machine_interfacing_assimilator already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 121
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_synthetic_evolution already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 158
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_mind_over_matter already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 234
+[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_synthetic_age already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 279
 ```
 
 ## Changelog
