@@ -55,7 +55,7 @@ living_standard_ego_assimilation = {
 
 	potential = {
 		# has_psionic_species_trait = no
-		is_robotic_species = no
+		is_robotic = no
 		exists = from
 		from = {
 			is_hive_empire = yes
@@ -142,7 +142,7 @@ living_standard_cyborg_ego_assimilation = {
 	}
 
 	potential = {
-		is_robotic_species = no
+		is_robotic = no
 		exists = from
 		from = {
 			OR = {
@@ -237,7 +237,7 @@ living_standard_tech_assimilation = {
 					has_active_tradition = tr_synthetics_adopt_machine
 					prev = {
 						OR = {
-							is_robotic_species = yes
+							is_robotic = yes
 							has_trait = trait_cybernetic
 						}
 					}
@@ -274,7 +274,7 @@ living_standard_cyborg_assimilation = {
 
 	potential = {
 		has_utopia = yes
-		is_robotic_species = no
+		is_robotic = no
 		exists = from
 		from = {
 			is_hive_empire = no
