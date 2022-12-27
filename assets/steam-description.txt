@@ -22,12 +22,13 @@ This mod is intentionally not included in my modpack [url=https://steamcommunity
 This mod can be added before or during a game. The new rules for allowing multiple "ascension path" ascension perks will take effect immediately, even for empires which have already chosen an ascension path. It is not recommended to remove during a game, as it could cause problems that have selected multiple ascension perks which are incompatible without this mod. Always back up your savegame before trying to remove a mod.
 
 [h3]Required Mod Dependencies[/h3]
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372]Deassimilate Machines[/url] contains all the changes to the Assimilation citizenship type and assimilation process required to support multiple assimilation types in one empire.
-
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372]Deassimilate Machines[/url] contains all the changes to the Assimilation citizenship type and assimilation process required to support multiple assimilation types in one empire
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2601239912]Psionic Ascension: Even in Other Empires[/url] grants the Latent Psionic and Psionic traits to all members of a species (galaxy-wide) when their founding empire chooses Psionic ascension; works with this mod to allow cybernetic Pops to also gain psionic powers
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2499031295]Leader Traits: All Eligible Species Traits[/url] ensures that your leaders gain all applicable leader traits for any species traits their species possesses (such as Psionic, Cybernetic, and/or Erudite)
+[/list]
 [h3]Recommended Companion Mods[/h3]
 [list]
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2499031295]Leader Traits: All Eligible Species Traits[/url] will ensure that your leaders gain all applicable leader traits for any species traits their species possesses (such as Psionic, Cybernetic, and/or Erudite)
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2601239912]Psionic Ascension: Even in Other Empires[/url] grans the Latent Psionic and Psionic traits to all members of a species (galaxy-wide) when their founding empire chooses Psionic ascension; works with this mod to allow cybernetic Pops to also gain psionic powers
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684]Retain Leaders from Integrated Subjects[/url] allows you to retain leaders from integrated subjects and conquered/infiltrated primitives; works with this mod so retained leaders can have multiple assimilations applied to them
 [/list]
 [h3]Known Issues[/h3]

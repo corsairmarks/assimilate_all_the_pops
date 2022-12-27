@@ -1,6 +1,8 @@
 name="Assimilate All the Pops"
 dependencies={
 	"Deassimilate Machines"
+	"Leader Traits: All Eligible Species Traits"
+	"Psionic Ascension: Even in Other Empires"
 }
 tags={
 	"Economy"
