@@ -5,7 +5,7 @@
 # 	pop_happiness = 0.15
 # }
 
-# Modified: use trigger
+# Modified: use triggers
 living_standard_deassimilation = {
 	pop_modifier = {}
 
@@ -35,10 +35,7 @@ living_standard_deassimilation = {
 	}
 }
 
-# Modified:
-# * use triggers
-# * allow psionic species
-# * weighted higher if already living_standard_ego_assimilation_psionic
+# Modified: use triggers
 living_standard_ego_assimilation = {
 	in_breach_of = {
 		{
@@ -54,7 +51,7 @@ living_standard_ego_assimilation = {
 	}
 
 	potential = {
-		# has_psionic_species_trait = no
+		has_psionic_species_trait = no
 		is_robotic = no
 		exists = from
 		from = {
@@ -77,18 +74,10 @@ living_standard_ego_assimilation = {
 
 	ai_will_do = {
 		factor = 100
-		modifier = {
-			factor = 10
-			exists = from
-			has_living_standard = {
-				type = living_standard_ego_assimilation_psionic
-				country = from
-			}
-		}
 	}
 }
 
-# Modified: disallow usage
+# Modified: use triggers
 living_standard_ego_assimilation_psionic = {
 	in_breach_of = {
 		{
@@ -104,7 +93,14 @@ living_standard_ego_assimilation_psionic = {
 	}
 
 	potential = {
-		always = no
+		has_psionic_species_trait = yes
+		is_robotic = no
+		exists = from
+		from = {
+			is_hive_empire = yes
+			NOT = { has_civic = civic_hive_devouring_swarm }
+			has_tradition = tr_genetics_creation
+		}
 	}
 
 	allow = {
@@ -119,7 +115,7 @@ living_standard_ego_assimilation_psionic = {
 	}
 
 	ai_will_do = {
-		factor = 0
+		factor = 100
 	}
 }
 
