@@ -14,7 +14,7 @@ Disables the "remove psionic" and "remove cybernetic" versions of the assimilati
 
 ## Compatibility
 
-This mod overrides the seven ascension path-related ascension perks. It is not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. It is also not compatible with mods that adjust the Synthetics, Cybernatics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible).
+This mod overrides the seven ascension path-related ascension perks. It is not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. It is also not compatible with mods that adjust the Synthetics, Cybernetics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible).
 
 Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
