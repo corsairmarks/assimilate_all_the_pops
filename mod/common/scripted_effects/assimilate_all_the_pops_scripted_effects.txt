@@ -6,7 +6,7 @@ aatp_prepare_cybernetic_species = {
 	if = {
 		limit = { prev = { is_hive_empire = no } }
 		modify_species = {
-			species = species
+			species = this
 			add_trait = trait_cybernetic
 			add_traits_at_start_of_list = yes
 			remove_trait = trait_self_modified
