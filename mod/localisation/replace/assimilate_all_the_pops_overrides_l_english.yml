@@ -1,0 +1,7 @@
+﻿l_english:
+ living_standard_ego_assimilation: "Identity Sublimation ($trait_hive_mind$)"
+ living_standard_cyborg_ego_assimilation: "Identity Sublimation ($trait_cybernetic$)"
+ living_standard_cyborg_ego_assimilation_psionic: "$living_standard_cyborg_ego_assimilation$"
+ living_standard_tech_assimilation: "Transubstantiation Synthesis ($trait_robotic_3$)"
+ living_standard_cyborg_assimilation: "Transubstantiation Synthesis ($trait_cybernetic$)"
+ living_standard_cyborg_assimilation_psionic: "$living_standard_cyborg_assimilation$"

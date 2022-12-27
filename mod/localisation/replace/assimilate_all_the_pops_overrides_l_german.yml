@@ -1,0 +1,7 @@
+﻿l_german:
+ living_standard_ego_assimilation: "Identitätsaufstieg ($trait_hive_mind$)"
+ living_standard_cyborg_ego_assimilation: "Identitätsaufstieg ($trait_cybernetic$)"
+ living_standard_cyborg_ego_assimilation_psionic: "$living_standard_cyborg_ego_assimilation$"
+ living_standard_tech_assimilation: "Transsubstantiationssynthese ($trait_robotic_3$)"
+ living_standard_cyborg_assimilation: "Transsubstantiationssynthese ($trait_cybernetic$)"
+ living_standard_cyborg_assimilation_psionic: "$living_standard_cyborg_assimilation$"
