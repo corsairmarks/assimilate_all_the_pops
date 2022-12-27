@@ -17,6 +17,8 @@ This mod overrides the seven ascension path-related ascension perks. It is not c
 
 Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
+Do you want this mod to be compatible with your favorite "more tradition slots" mod? Simply override the scripted variable [b]assimilate_all_the_pops_tradition_categories_max[/b] and set it equal to the maximum number of tradition slots allowed by your other mod. Ascension perk tradition slot checks (i.e. "Requires an empty Tradition Tree slot.") in this mod will use that number.
+
 [h3]Not Included in "Subtle Polish"[/h3]
 This mod is intentionally not included in my modpack [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089]Subtle Polish: A Collection of Fixes and Enhancements[/url] because it contains a significant gameplay change. It is otherwise fully compatible.
 
