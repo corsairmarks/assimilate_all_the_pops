@@ -16,10 +16,6 @@ ap_engineered_evolution = {
 	}
 	possible = {
 		custom_tooltip = {
-			fail_text = "synthetic_empire_biological_ascension"
-			NOT = { has_trait = trait_mechanical }
-		}
-		custom_tooltip = {
 			fail_text = "requires_ascension_perks_1"
 			num_ascension_perks > 0
 		}
@@ -32,13 +28,11 @@ ap_engineered_evolution = {
 			num_tradition_categories < @assimilate_all_the_things_tradition_categories_max
 		}
 	}
-
 	potential = {
 		has_utopia = yes
 		NOT = { has_ascension_perk = ap_engineered_evolution }
 		is_machine_empire = no
 	}
-
 	ai_weight = {
 		factor = 15
 		modifier = {
@@ -60,10 +54,6 @@ ap_the_flesh_is_weak = {
 	}
 	possible = {
 		custom_tooltip = {
-			fail_text = "synthetic_empire_synthetic_ascension"
-			NOT = { has_trait = trait_mechanical }
-		}
-		custom_tooltip = {
 			fail_text = "requires_ascension_perks_1"
 			num_ascension_perks > 0
 		}
@@ -76,12 +66,10 @@ ap_the_flesh_is_weak = {
 			num_tradition_categories < @assimilate_all_the_things_tradition_categories_max
 		}
 	}
-
 	potential = {
 		has_utopia = yes
 		is_gestalt = no
 	}
-
 	ai_weight = {
 		factor = 20
 		modifier = {
@@ -115,13 +103,11 @@ ap_organo_machine_interfacing = {
 			num_tradition_categories < @assimilate_all_the_things_tradition_categories_max
 		}
 	}
-
 	potential = {
 		has_utopia = yes
 		NOT = { has_ascension_perk = ap_organo_machine_interfacing }
 		is_hive_empire = yes
 	}
-
 	ai_weight = {
 		factor = 20
 		modifier = {
@@ -154,13 +140,11 @@ ap_organo_machine_interfacing_assimilator = {
 			num_tradition_categories < @assimilate_all_the_things_tradition_categories_max
 		}
 	}
-
 	potential = {
 		has_utopia = yes
 		NOT = { has_ascension_perk = ap_organo_machine_interfacing_assimilator }
 		has_valid_civic = civic_machine_assimilator
 	}
-
 	ai_weight = {
 		factor = 20
 		modifier = {
@@ -212,10 +196,6 @@ ap_synthetic_evolution = {
 	}
 	possible = {
 		custom_tooltip = {
-			fail_text = "synthetic_empire_synthetic_ascension"
-			NOT = { has_trait = trait_mechanical }
-		}
-		custom_tooltip = {
 			fail_text = "requires_ascension_perks_1"
 			num_ascension_perks > 0
 		}
@@ -228,13 +208,11 @@ ap_synthetic_evolution = {
 			num_tradition_categories < @assimilate_all_the_things_tradition_categories_max
 		}
 	}
-
 	potential = {
 		has_utopia = yes
 		NOT = { has_ascension_perk = ap_synthetic_evolution }
 		is_gestalt = no
 	}
-
 	ai_weight = {
 		factor = 20
 		modifier = {
@@ -260,10 +238,6 @@ ap_mind_over_matter = {
 	}
 	possible = {
 		custom_tooltip = {
-			fail_text = "synthetic_empire_psionic_ascension"
-			NOT = { has_trait = trait_mechanical }
-		}
-		custom_tooltip = {
 			fail_text = "requires_ascension_perks_1"
 			num_ascension_perks > 0
 		}
@@ -276,7 +250,6 @@ ap_mind_over_matter = {
 			num_tradition_categories < @assimilate_all_the_things_tradition_categories_max
 		}
 	}
-
 	potential = {
 		has_utopia = yes
 		NOR = {
@@ -285,7 +258,6 @@ ap_mind_over_matter = {
 		}
 		is_gestalt = no
 	}
-
 	ai_weight = {
 		factor = 100
 		modifier = {
@@ -309,13 +281,11 @@ ap_synthetic_age = {
 		custom_tooltip = "synthetic_age_tooltip"
 		add_research_option = tech_binary_motivators
 	}
-
 	potential = {
 		has_synthethic_dawn = yes
 		NOT = { has_ascension_perk = ap_synthetic_age }
 		is_machine_empire = yes
 	}
-
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_technology_robomodding"
@@ -333,7 +303,6 @@ ap_synthetic_age = {
 			num_tradition_categories < @assimilate_all_the_things_tradition_categories_max
 		}
 	}
-
 	ai_weight = {
 		factor = 20
 		modifier = {
