@@ -21,22 +21,23 @@ country_event = {
 				}
 				any_owned_pop_species = { is_exact_same_species = root.owner_species }
 			}
-			random_owned_pop_species = {
+			random_owned_species = {
 				limit = { is_exact_same_species = root.owner_species }
 				aatp_prepare_cybernetic_species = yes
+				event_target:prepared_species = { save_event_target_as = cybernetic_species }
 			}
 		}
 		else = {
-			random_owned_pop_species = {
+			random_owned_species = {
 				limit = {
 					is_same_species = root.owner_species
 					is_robotic = no
 					NOT = { has_trait = trait_cybernetic }
 				}
 				aatp_prepare_cybernetic_species = yes
+				event_target:prepared_species = { save_event_target_as = cybernetic_species }
 			}
 		}
-		event_target:prepared_species = { save_event_target_as = cybernetic_species }
 		every_owned_pop_species = {
 			limit = {
 				NOT = { has_trait = trait_cybernetic }
@@ -49,12 +50,13 @@ country_event = {
 		every_controlled_ship = {
 			limit = {
 				is_ship_class = shipclass_colonizer
+				exists = species
 				species = {
 					NOT = { has_trait = trait_cybernetic }
 					is_robotic = no
 				}
 			}
-			aatp_prepare_cybernetic_species = yes
+			species = { aatp_prepare_cybernetic_species = yes }
 			change_species = event_target:prepared_species
 		}
 		every_owned_army = {
@@ -65,7 +67,7 @@ country_event = {
 					is_robotic = no
 				}
 			}
-			aatp_prepare_cybernetic_species = yes
+			species = { aatp_prepare_cybernetic_species = yes }
 			change_species = event_target:prepared_species
 		}
 		every_owned_leader = {
@@ -120,7 +122,10 @@ country_event = {
 			}
 		}
 		if = {
-			limit = { owner_species = { is_robotic = no } }
+			limit = {
+				exists = event_target:cybernetic_species
+				owner_species = { is_robotic = no }
+			}
 			change_dominant_species = { species = event_target:cybernetic_species }
 		}
 		# note: cybernetic leader traits are added by Leader Traits: All Eligible Species Traits
