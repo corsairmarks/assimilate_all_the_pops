@@ -58,7 +58,7 @@ This mod overrides one event, seven ascension perks, and ten living standards fr
 [08:19:37][objdb.h:165]: ap_synthetic_age already exists, using: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 279
 [/code]
 [h2]Changelog[/h2]
-See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/XXX]Change Notes[/url]
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2908463208]Change Notes[/url]
 
 [h2]Source Code[/h2]
 Hosted on [url=https://github.com/corsairmarks/assimilate_all_the_pops]GitHub[/url]
