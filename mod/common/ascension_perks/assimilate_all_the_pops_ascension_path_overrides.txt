@@ -65,6 +65,25 @@ ap_the_flesh_is_weak = {
 			fail_text = "requires_free_tradition_tree"
 			num_tradition_categories < @assimilate_all_the_pops_tradition_categories_max
 		}
+		if = {
+			limit = { has_civic_organic_zealots_active = yes }
+			custom_tooltip = {
+				fail_text = "lost_robot_policy_war_fail"
+				NOT = { has_country_flag = lost_robot_policy_war }
+			}
+			custom_tooltip = {
+				fail_text = "civic_tooltip_not_organic_zealots_fail"
+				NOT = { has_valid_civic = civic_organic_zealots }
+			}
+			custom_tooltip = {
+				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
+				NAND = {
+					is_subject = yes
+					exists = overlord
+					overlord = { has_valid_civic = civic_organic_zealots }
+				}
+			}
+		}
 	}
 	potential = {
 		has_utopia = yes
@@ -101,6 +120,25 @@ ap_organo_machine_interfacing = {
 		custom_tooltip = {
 			fail_text = "requires_free_tradition_tree"
 			num_tradition_categories < @assimilate_all_the_pops_tradition_categories_max
+		}
+		if = {
+			limit = { has_civic_organic_zealots_active = yes }
+			custom_tooltip = {
+				fail_text = "lost_robot_policy_war_fail"
+				NOT = { has_country_flag = lost_robot_policy_war }
+			}
+			custom_tooltip = {
+				fail_text = "civic_tooltip_not_organic_zealots_fail"
+				NOT = { has_valid_civic = civic_organic_zealots }
+			}
+			custom_tooltip = {
+				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
+				NAND = {
+					is_subject = yes
+					exists = overlord
+					overlord = { has_valid_civic = civic_organic_zealots }
+				}
+			}
 		}
 	}
 	potential = {
@@ -207,11 +245,31 @@ ap_synthetic_evolution = {
 			fail_text = "requires_free_tradition_tree"
 			num_tradition_categories < @assimilate_all_the_pops_tradition_categories_max
 		}
+		if = {
+			limit = { has_civic_organic_zealots_active = yes }
+			custom_tooltip = {
+				fail_text = "lost_robot_policy_war_fail"
+				NOT = { has_country_flag = lost_robot_policy_war }
+			}
+			custom_tooltip = {
+				fail_text = "civic_tooltip_not_organic_zealots_fail"
+				NOT = { has_valid_civic = civic_organic_zealots }
+			}
+			custom_tooltip = {
+				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
+				NAND = {
+					is_subject = yes
+					exists = overlord
+					overlord = { has_valid_civic = civic_organic_zealots }
+				}
+			}
+		}
 	}
 	potential = {
 		has_utopia = yes
 		NOT = { has_ascension_perk = ap_synthetic_evolution }
 		is_gestalt = no
+		is_mechanical_empire = no
 	}
 	ai_weight = {
 		factor = 20
