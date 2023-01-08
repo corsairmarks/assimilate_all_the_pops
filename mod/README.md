@@ -68,6 +68,10 @@ This mod overrides one event, seven ascension perks, and ten living standards fr
 ## Changelog
 
 * 1.0.0 Initial version
+* 2.0.0 Add support for Civic: Organic Zealots
+    * Add a compatibility trigger for other mods to check whether this one is active
+    * Consume the compatibility trigger from Civic: Organic Zealots
+    * Remove old compatibility global flag
 
 ## Source Code
 
