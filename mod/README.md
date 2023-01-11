@@ -22,13 +22,13 @@ Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
 Do you want this mod to be compatible with your favorite "more tradition slots" mod? Simply override the scripted variable `assimilate_all_the_pops_tradition_categories_max` and set it equal to the maximum number of tradition slots allowed by your other mod. Ascension perk tradition slot checks (i.e. "Requires an empty Tradition Tree slot.") in this mod will use that number.
 
-### Not Included in "Subtle Polish"
-
-This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089) because it contains a significant gameplay change. It is otherwise fully compatible.
-
 ### When to Install
 
 This mod can be added before or during a game. The new rules for allowing multiple "ascension path" ascension perks will take effect immediately, even for empires which have already chosen an ascension path. It is not recommended to remove during a game, as it could cause problems that have selected multiple ascension perks which are incompatible without this mod. Always back up your savegame before trying to remove a mod.
+
+### Not Included in "Subtle Polish"
+
+This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089) because it contains a significant gameplay change. It is otherwise fully compatible.
 
 ### Required Mod Dependencies
 
@@ -40,7 +40,7 @@ This mod can be added before or during a game. The new rules for allowing multip
 
 * [Retain Leaders from Integrated Subjects](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684) allows you to retain leaders from integrated subjects and conquered/infiltrated primitives; works with this mod so retained leaders can have multiple assimilations applied to them
 
-### Known Issues
+## Known Issues
 
 This mod overrides one event, seven ascension perks, and ten living standards from the base game. Expect to see eighteen lines in error.log like this:
 

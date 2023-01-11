@@ -19,11 +19,11 @@ Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
 Do you want this mod to be compatible with your favorite "more tradition slots" mod? Simply override the scripted variable [b]assimilate_all_the_pops_tradition_categories_max[/b] and set it equal to the maximum number of tradition slots allowed by your other mod. Ascension perk tradition slot checks (i.e. "Requires an empty Tradition Tree slot.") in this mod will use that number.
 
-[h3]Not Included in "Subtle Polish"[/h3]
-This mod is intentionally not included in my modpack [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089]Subtle Polish: A Collection of Fixes and Enhancements[/url] because it contains a significant gameplay change. It is otherwise fully compatible.
-
 [h3]When to Install[/h3]
 This mod can be added before or during a game. The new rules for allowing multiple "ascension path" ascension perks will take effect immediately, even for empires which have already chosen an ascension path. It is not recommended to remove during a game, as it could cause problems that have selected multiple ascension perks which are incompatible without this mod. Always back up your savegame before trying to remove a mod.
+
+[h3]Not Included in "Subtle Polish"[/h3]
+This mod is intentionally not included in my modpack [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089]Subtle Polish: A Collection of Fixes and Enhancements[/url] because it contains a significant gameplay change. It is otherwise fully compatible.
 
 [h3]Required Mod Dependencies[/h3]
 [list]
@@ -35,7 +35,7 @@ This mod can be added before or during a game. The new rules for allowing multip
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684]Retain Leaders from Integrated Subjects[/url] allows you to retain leaders from integrated subjects and conquered/infiltrated primitives; works with this mod so retained leaders can have multiple assimilations applied to them
 [/list]
-[h3]Known Issues[/h3]
+[h2]Known Issues[/h2]
 This mod overrides one event, seven ascension perks, and ten living standards from the base game. Expect to see eighteen lines in error.log like this:
 [code]
 [08:19:32][objdb.h:165]: living_standard_deassimilation already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 9
