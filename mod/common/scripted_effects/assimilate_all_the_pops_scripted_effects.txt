@@ -1,7 +1,7 @@
 # set up a species for cybernetic assimilation, saved as event_target:prepared_species
 # this = species
 # prev = country (assimilator)
-aatp_prepare_cybernetic_species = {
+aatp_prepare_cyborg_species = {
 	optimize_memory
 	if = {
 		limit = { prev = { is_hive_empire = no } }
