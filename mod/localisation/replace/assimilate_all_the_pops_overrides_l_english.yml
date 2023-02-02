@@ -5,3 +5,16 @@
  living_standard_tech_assimilation: "Transubstantiation Synthesis ($trait_robotic_3$)"
  living_standard_cyborg_assimilation: "Transubstantiation Synthesis ($trait_cybernetic$)"
  living_standard_cyborg_assimilation_psionic: "$living_standard_cyborg_assimilation$"
+
+ # localisation to make the game happy with the dummy civic - matches the content from  Civic: Organic Zealots so that it won't matter which mod loads first
+ civic_organic_zealots: "Organic Zealots"
+ civic_organic_zealots_desc: "'Thou shalt not make a machine in the likeness of an organic mind.' This society created, was enslaved by, overthrew, and finally purged Thinking Machines. They seek to prevent the redevelopment of artificial intelligence, or, failing that, oversee its eradication."
+ civic_tooltip_not_organic_zealots: "Does NOT have §Y$civic_organic_zealots$§! Civic"
+ civic_tooltip_not_organic_zealots_fail: "$TRIGGER_FAIL$$civic_tooltip_not_organic_zealots$"
+ civic_tooltip_not_organic_zealots_pass: "$TRIGGER_PASS$$civic_tooltip_not_organic_zealots$"
+ civic_tooltip_overlord_not_organic_zealots: "Overlord does NOT have §Y$civic_organic_zealots$§! Civic"
+ civic_tooltip_overlord_not_organic_zealots_fail: "$TRIGGER_FAIL$$civic_tooltip_overlord_not_organic_zealots$"
+ civic_tooltip_overlord_not_organic_zealots_pass: "$TRIGGER_PASS$$civic_tooltip_overlord_not_organic_zealots$"
+ lost_robot_policy_war: "Recently lost an impose policy war that outlawed robots and AI"
+ lost_robot_policy_war_fail: "$TRIGGER_FAIL$$lost_robot_policy_war$"
+ lost_robot_policy_war_pass: "$TRIGGER_PASS$$lost_robot_policy_war$"
