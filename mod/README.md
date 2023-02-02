@@ -73,6 +73,7 @@ This mod overrides one event, seven ascension perks, and ten living standards fr
     * Consume the compatibility trigger from Civic: Organic Zealots
     * Remove old compatibility global flag
 * 2.0.1 Disallow "The Flesh is Weak" from being chosen multiple times
+* 2.1.0 Reuse code from Deassimilate Machines rather than duplicating it
 
 ## Source Code
 
