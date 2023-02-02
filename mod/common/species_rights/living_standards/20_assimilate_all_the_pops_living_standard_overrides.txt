@@ -188,7 +188,7 @@ living_standard_cyborg_ego_assimilation = {
 			}
 			custom_tooltip = {
 				fail_text = civic_tooltip_not_organic_zealots_fail
-				from = { NOT = { has_valid_civic = civic_organic_zealots } }
+				from = { is_valid_organic_zealots = no }
 			}
 			custom_tooltip = {
 				fail_text = civic_tooltip_overlord_not_organic_zealots_fail
@@ -196,7 +196,7 @@ living_standard_cyborg_ego_assimilation = {
 					NAND = {
 						is_subject = yes
 						exists = overlord
-						overlord = { has_valid_civic = civic_organic_zealots }
+						overlord = { is_valid_organic_zealots = yes }
 					}
 				}
 			}
@@ -304,7 +304,7 @@ living_standard_tech_assimilation = {
 			}
 			custom_tooltip = {
 				fail_text = civic_tooltip_not_organic_zealots_fail
-				from = { NOT = { has_valid_civic = civic_organic_zealots } }
+				from = { is_valid_organic_zealots = no }
 			}
 			custom_tooltip = {
 				fail_text = civic_tooltip_overlord_not_organic_zealots_fail
@@ -312,7 +312,7 @@ living_standard_tech_assimilation = {
 					NAND = {
 						is_subject = yes
 						exists = overlord
-						overlord = { has_valid_civic = civic_organic_zealots }
+						overlord = { is_valid_organic_zealots = yes }
 					}
 				}
 			}
@@ -361,7 +361,7 @@ living_standard_cyborg_assimilation = {
 			}
 			custom_tooltip = {
 				fail_text = civic_tooltip_not_organic_zealots_fail
-				from = { NOT = { has_valid_civic = civic_organic_zealots } }
+				from = { is_valid_organic_zealots = no }
 			}
 			custom_tooltip = {
 				fail_text = civic_tooltip_overlord_not_organic_zealots_fail
@@ -369,7 +369,7 @@ living_standard_cyborg_assimilation = {
 					NAND = {
 						is_subject = yes
 						exists = overlord
-						overlord = { has_valid_civic = civic_organic_zealots }
+						overlord = { is_valid_organic_zealots = yes }
 					}
 				}
 			}

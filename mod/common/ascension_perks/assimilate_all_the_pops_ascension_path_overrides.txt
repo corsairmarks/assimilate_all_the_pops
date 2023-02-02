@@ -73,14 +73,14 @@ ap_the_flesh_is_weak = {
 			}
 			custom_tooltip = {
 				fail_text = "civic_tooltip_not_organic_zealots_fail"
-				NOT = { has_valid_civic = civic_organic_zealots }
+				is_valid_organic_zealots = no
 			}
 			custom_tooltip = {
 				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
 				NAND = {
 					is_subject = yes
 					exists = overlord
-					overlord = { has_valid_civic = civic_organic_zealots }
+					overlord = { is_valid_organic_zealots = yes }
 				}
 			}
 		}
@@ -130,14 +130,14 @@ ap_organo_machine_interfacing = {
 			}
 			custom_tooltip = {
 				fail_text = "civic_tooltip_not_organic_zealots_fail"
-				NOT = { has_valid_civic = civic_organic_zealots }
+				is_valid_organic_zealots = no
 			}
 			custom_tooltip = {
 				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
 				NAND = {
 					is_subject = yes
 					exists = overlord
-					overlord = { has_valid_civic = civic_organic_zealots }
+					overlord = { is_valid_organic_zealots = yes }
 				}
 			}
 		}
@@ -256,14 +256,14 @@ ap_synthetic_evolution = {
 			}
 			custom_tooltip = {
 				fail_text = "civic_tooltip_not_organic_zealots_fail"
-				NOT = { has_valid_civic = civic_organic_zealots }
+				is_valid_organic_zealots = no
 			}
 			custom_tooltip = {
 				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
 				NAND = {
 					is_subject = yes
 					exists = overlord
-					overlord = { has_valid_civic = civic_organic_zealots }
+					overlord = { is_valid_organic_zealots = yes }
 				}
 			}
 		}
