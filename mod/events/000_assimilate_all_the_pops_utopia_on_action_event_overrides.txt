@@ -23,7 +23,7 @@ country_event = {
 			}
 			random_owned_species = {
 				limit = { is_exact_same_species = root.owner_species }
-				aatp_prepare_cyborg_species = yes
+				dm_prepare_cyborg_species = yes
 				event_target:prepared_species = { save_event_target_as = cybernetic_species }
 			}
 		}
@@ -34,7 +34,7 @@ country_event = {
 					is_robotic = no
 					NOT = { has_trait = trait_cybernetic }
 				}
-				aatp_prepare_cyborg_species = yes
+				dm_prepare_cyborg_species = yes
 				event_target:prepared_species = { save_event_target_as = cybernetic_species }
 			}
 		}
@@ -43,7 +43,7 @@ country_event = {
 				NOT = { has_trait = trait_cybernetic }
 				is_robotic = no
 			}
-			aatp_prepare_cyborg_species = yes
+			dm_prepare_cyborg_species = yes
 			aatp_convert_species = yes
 		}
 		# catches colony ships/armies/leaders whose species the owner does not have any Pops
@@ -56,7 +56,7 @@ country_event = {
 					is_robotic = no
 				}
 			}
-			species = { aatp_prepare_cyborg_species = yes }
+			species = { dm_prepare_cyborg_species = yes }
 			change_species = event_target:prepared_species
 		}
 		every_owned_army = {
@@ -67,7 +67,7 @@ country_event = {
 					is_robotic = no
 				}
 			}
-			species = { aatp_prepare_cyborg_species = yes }
+			species = { dm_prepare_cyborg_species = yes }
 			change_species = event_target:prepared_species
 		}
 		every_owned_leader = {
@@ -78,7 +78,7 @@ country_event = {
 				}
 			}
 			save_event_target_as = previous_leader_species
-			aatp_prepare_cyborg_species = yes
+			dm_prepare_cyborg_species = yes
 			change_species = event_target:prepared_species
 			fire_on_action = {
 				on_action = on_leader_species_changed
@@ -95,7 +95,7 @@ country_event = {
 				}
 			}
 			save_event_target_as = previous_leader_species
-			aatp_prepare_cyborg_species = yes
+			dm_prepare_cyborg_species = yes
 			change_species = event_target:prepared_species
 			fire_on_action = {
 				on_action = on_leader_species_changed
@@ -112,7 +112,7 @@ country_event = {
 				}
 			}
 			save_event_target_as = previous_leader_species
-			aatp_prepare_cyborg_species = yes
+			dm_prepare_cyborg_species = yes
 			change_species = event_target:prepared_species
 			fire_on_action = {
 				on_action = on_leader_species_changed

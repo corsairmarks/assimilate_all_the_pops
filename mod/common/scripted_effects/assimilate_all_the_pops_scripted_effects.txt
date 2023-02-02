@@ -1,39 +1,3 @@
-# set up a species for cybernetic assimilation, saved as event_target:prepared_species
-# this = species
-# prev = country (assimilator)
-aatp_prepare_cyborg_species = {
-	optimize_memory
-	if = {
-		limit = { prev = { is_hive_empire = no } }
-		modify_species = {
-			species = this
-			add_trait = trait_cybernetic
-			add_traits_at_start_of_list = yes
-			remove_trait = trait_self_modified
-			remove_trait = trait_hive_mind
-			change_scoped_species = no
-			effect = {
-				save_event_target_as = prepared_species
-			}
-		}
-	}
-	else = {
-		modify_species = {
-			species = this
-			add_trait = trait_cybernetic
-			add_trait = trait_hive_mind
-			add_traits_at_start_of_list = yes
-			remove_trait = trait_self_modified
-			remove_trait = trait_latent_psionic
-			remove_trait = trait_psionic
-			change_scoped_species = no
-			effect = {
-				save_event_target_as = prepared_species
-			}
-		}
-	}
-}
-
 # this = species
 # prev = country (assimilator)
 # event_target:prepared_species = species to change into
