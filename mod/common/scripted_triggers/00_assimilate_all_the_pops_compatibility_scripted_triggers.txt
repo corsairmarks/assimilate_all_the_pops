@@ -5,6 +5,13 @@ has_civic_organic_zealots_active = {
 	always = no
 }
 
+# supports features from my mod Deassimilate Machines
+# this = any
+has_deassimilate_machines_active = {
+	optimize_memory
+	always = no
+}
+
 ### Civic: Organic Zealots ###
 
 # this = country
