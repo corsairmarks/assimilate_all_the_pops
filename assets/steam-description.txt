@@ -1,3 +1,5 @@
+[u][b][i]IMPORTANT UPDATE:[/i][/b][/u] This mod no longer requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372]Deassimilate Machines[/url].
+
 [h1]Overview[/h1]
 Do you want to assimilate all your Pops in all the ways? Then this mod is for you!
 
@@ -13,10 +15,18 @@ Disables the "remove psionic" and "remove cybernetic" versions of the assimilati
 Psionic traits are still incompatible with hive minds, as in the unmodded game.
 
 [h2]Compatibility[/h2]
-This mod overrides the seven ascension path-related ascension perks. It is not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. It is also not compatible with mods that adjust the Synthetics, Cybernetics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible).
-
 Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
+This mod overrides the seven ascension path-related ascension perks. It is not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. It is also not compatible with mods that adjust the Synthetics, Cybernetics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible).
+
+Also overridden are some events and other game code related to implementing assimilation:
+[list]
+[*]Event [b]action.64[/b] - assimilation setup event, altered to ue triggers and effects (which themselves simply the game logic)
+[*]Event [b]action.65[/b] - main assimilation event, altered to use less duplicate code and pass two variables to its effect calls - the current number of assimilated Pops and the total number allowed for the year
+[*]Event [b]utopia.2551[/b] - Synthetic Evolution, altered to not change synthetic leaders of other species into the empire's main species (cyborgs are still fair game, however) and attempt to create an initial synthetic species with similar traits to the previous, organic species
+[*]Effect [b]assimilation_effect[/b] - main assimilation logic (called by [b]action.65[/b]), altered so that deassimilated machines are not converted into the synthetic species for fully synthetic empires, also code de-duped
+[*]Citizenship [b]citizenship_assimilation[/b] - Assimilation, improved to understand that empires can have multiple assimilation types available
+[/list]
 Do you want this mod to be compatible with your favorite "more tradition slots" mod? Simply override the scripted variable [b]assimilate_all_the_pops_tradition_categories_max[/b] and set it equal to the maximum number of tradition slots allowed by your other mod. Ascension perk tradition slot checks (i.e. "Requires an empty Tradition Tree slot.") in this mod will use that number.
 
 [h3]When to Install[/h3]
@@ -27,36 +37,18 @@ This mod is intentionally not included in my modpack [url=https://steamcommunity
 
 [h3]Required Mod Dependencies[/h3]
 [list]
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372]Deassimilate Machines[/url] contains all the changes to the Assimilation citizenship type and assimilation process required to support multiple assimilation types in one empire
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2601239912]Psionic Ascension: Even in Other Empires[/url] grants the Latent Psionic and Psionic traits to all members of a species (galaxy-wide) when their founding empire chooses Psionic ascension; works with this mod to allow cybernetic Pops to also gain psionic powers
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2499031295]Leader Traits: All Eligible Species Traits[/url] ensures that your leaders gain all applicable leader traits for any species traits their species possesses (such as Psionic, Cybernetic, and/or Erudite)
 [/list]
 [h3]Recommended Companion Mods[/h3]
 [list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2920668465]Civic: Organic Zealots[/url] provides a brand-new homicidal civic that can interfere with cybernetic and synthetic assimilation, and all empires can now choose to remove cybernetic implants via a deassimilation process (with the right technologies)
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372]Deassimilate Machines[/url] contains all the changes to the Assimilation citizenship type and assimilation process required to support multiple assimilation types in one empire
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684]Retain Leaders from Integrated Subjects[/url] allows you to retain leaders from integrated subjects and conquered/infiltrated primitives; works with this mod so retained leaders can have multiple assimilations applied to them
 [/list]
 [h2]Known Issues[/h2]
-This mod overrides one event, seven ascension perks, and ten living standards from the base game. Expect to see eighteen lines in error.log like this:
-[code]
-[08:19:32][objdb.h:165]: living_standard_deassimilation already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 9
-[08:19:32][objdb.h:165]: living_standard_ego_assimilation already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 42
-[08:19:32][objdb.h:165]: living_standard_ego_assimilation_psionic already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 92
-[08:19:32][objdb.h:165]: living_standard_cyborg_ego_assimilation already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 130
-[08:19:32][objdb.h:165]: living_standard_cyborg_ego_assimilation_psionic already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 187
-[08:19:32][objdb.h:165]: living_standard_tech_assimilation already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 222
-[08:19:32][objdb.h:165]: living_standard_cyborg_assimilation already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 270
-[08:19:32][objdb.h:165]: living_standard_cyborg_assimilation_psionic already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 310
-[08:19:32][objdb.h:165]: living_standard_psi_assimilation already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 340
-[08:19:32][objdb.h:165]: living_standard_psi_assimilation_cyborg already exists, using: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 377
-[08:19:34][eventmanager.cpp:368]: an event with id [utopia.2501] already exists! file: events/utopia_on_action_events.txt line: 250
-[08:19:37][objdb.h:165]: ap_engineered_evolution already exists, using: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 2
-[08:19:37][objdb.h:165]: ap_the_flesh_is_weak already exists, using: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 50
-[08:19:37][objdb.h:165]: ap_organo_machine_interfacing already exists, using: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 87
-[08:19:37][objdb.h:165]: ap_organo_machine_interfacing_assimilator already exists, using: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 121
-[08:19:37][objdb.h:165]: ap_synthetic_evolution already exists, using: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 158
-[08:19:37][objdb.h:165]: ap_mind_over_matter already exists, using: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 234
-[08:19:37][objdb.h:165]: ap_synthetic_age already exists, using: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 279
-[/code]
+This mod overrides one effect, one species right, ten living standards, four events, and seven ascension perks from the base game. Expect to see 23 lines in error.log describing these overrides.
+
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2908463208]Change Notes[/url]
 

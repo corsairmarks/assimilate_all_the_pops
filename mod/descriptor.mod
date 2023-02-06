@@ -1,6 +1,5 @@
 name="Assimilate All the Pops"
 dependencies={
-	"Deassimilate Machines"
 	"Leader Traits: All Eligible Species Traits"
 	"Psionic Ascension: Even in Other Empires"
 }
@@ -10,7 +9,7 @@ tags={
 	"Gameplay"
 	"Species"
 }
-version="2.1.0"
+version="3.0.0"
 picture="thumbnail.png"
 supported_version="3.6.*"
 remote_file_id="2908463208"

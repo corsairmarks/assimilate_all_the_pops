@@ -19,28 +19,12 @@
  PSI_SPECIES_CANT_BE_HIVE: "Hive minds cannot develop psionic powers."
  UNHIVE_SPECIES_MUST_BE_HIVE: "Only organic §Y$trait_hive_mind$§! species can be de-assimilated."
 
- # Duplicated from Civic: Organic Zealots
- civic_organic_zealots: "Organic Zealots"
- civic_tooltip_organic_zealots: "Has §Y$civic_organic_zealots$§! Civic"
- civic_tooltip_organic_zealots_fail: "$TRIGGER_FAIL$$civic_tooltip_organic_zealots$"
- civic_tooltip_organic_zealots_pass: "$TRIGGER_PASS$$civic_tooltip_organic_zealots$"
- civic_tooltip_overlord_organic_zealots: "Overlord has §Y$civic_organic_zealots$§! Civic"
- civic_tooltip_overlord_organic_zealots_fail: "$TRIGGER_FAIL$$civic_tooltip_overlord_organic_zealots$"
- civic_tooltip_overlord_organic_zealots_pass: "$TRIGGER_PASS$$civic_tooltip_overlord_organic_zealots$"
- civic_tooltip_not_organic_zealots: "Does NOT have §Y$civic_organic_zealots$§! Civic"
+ # localisation to make the game happy with the conditional content - matches localisation from  Civic: Organic Zealots so that it won't matter which mod loads first
  civic_tooltip_not_organic_zealots_fail: "$TRIGGER_FAIL$$civic_tooltip_not_organic_zealots$"
- civic_tooltip_not_organic_zealots_pass: "$TRIGGER_PASS$$civic_tooltip_not_organic_zealots$"
- civic_tooltip_overlord_not_organic_zealots: "Overlord does NOT have §Y$civic_organic_zealots$§! Civic"
  civic_tooltip_overlord_not_organic_zealots_fail: "$TRIGGER_FAIL$$civic_tooltip_overlord_not_organic_zealots$"
- civic_tooltip_overlord_not_organic_zealots_pass: "$TRIGGER_PASS$$civic_tooltip_overlord_not_organic_zealots$"
- lost_robot_policy_war: "Recently lost an $casus_belli_cb_impose_policy$ war that outlawed $tradition_cybernetics$, $policy_robot_pop_policy$, and $policy_artificial_intelligence_policy$"
  lost_robot_policy_war_fail: "$TRIGGER_FAIL$$lost_robot_policy_war$"
- lost_robot_policy_war_pass: "$TRIGGER_PASS$$lost_robot_policy_war$"
- casus_belli_cb_impose_policy: "Impose Policy"
- casus_belli_cb_robotic_purification: "$casus_belli_cb_purification$"
- casus_belli_cb_containment_organic_zealots: "$casus_belli_cb_containment$"
 
- # Duplicated from Deassimilate machines
+ # localisation to make the game happy with the conditional content - matches localisation from  Deassimilate Machines so that it won't matter which mod loads first
  disconnected_machine_pops_collapse_citizenship_assimilation: "$disconnected_machine_pops_collapse_citizenship$ Unless they could be retrofitted with individual §Y$tech_sapient_ai$§!..."
  ROBOTS_ARE_ALLOWED: "Robots must be §Gallowed§!."
  ROBOTS_ARE_ALLOWED_FAIL: "$TRIGGER_FAIL$$ROBOTS_ARE_ALLOWED$"

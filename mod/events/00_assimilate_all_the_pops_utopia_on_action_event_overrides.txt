@@ -1,9 +1,9 @@
 namespace = utopia
 
 # Modified:
-# * allow Psionic Pops to gain Cybernetic
-# * Cybernetic traits now handled by Leader Traits: All Eligible Species Traits
-# * do not set the dominant species if it is robotic
+# * allow psionic Pops to gain cybernetic
+# * cybernetic traits now handled by Leader Traits: All Eligible Species Traits
+# * do not (re)set the dominant species if it is robotic
 country_event = {
 	id = utopia.2501
 	title = utopia.2501.name
@@ -23,7 +23,7 @@ country_event = {
 			}
 			random_owned_species = {
 				limit = { is_exact_same_species = root.owner_species }
-				dm_prepare_cyborg_species = yes
+				prepare_cyborg_species = yes
 				event_target:prepared_species = { save_event_target_as = cybernetic_species }
 			}
 		}
@@ -34,7 +34,7 @@ country_event = {
 					is_robotic = no
 					NOT = { has_trait = trait_cybernetic }
 				}
-				dm_prepare_cyborg_species = yes
+				prepare_cyborg_species = yes
 				event_target:prepared_species = { save_event_target_as = cybernetic_species }
 			}
 		}
@@ -43,7 +43,7 @@ country_event = {
 				NOT = { has_trait = trait_cybernetic }
 				is_robotic = no
 			}
-			dm_prepare_cyborg_species = yes
+			prepare_cyborg_species = yes
 			aatp_convert_species = yes
 		}
 		# catches colony ships/armies/leaders whose species the owner does not have any Pops
@@ -56,7 +56,7 @@ country_event = {
 					is_robotic = no
 				}
 			}
-			species = { dm_prepare_cyborg_species = yes }
+			species = { prepare_cyborg_species = yes }
 			change_species = event_target:prepared_species
 		}
 		every_owned_army = {
@@ -67,7 +67,7 @@ country_event = {
 					is_robotic = no
 				}
 			}
-			species = { dm_prepare_cyborg_species = yes }
+			species = { prepare_cyborg_species = yes }
 			change_species = event_target:prepared_species
 		}
 		every_owned_leader = {
@@ -78,7 +78,7 @@ country_event = {
 				}
 			}
 			save_event_target_as = previous_leader_species
-			dm_prepare_cyborg_species = yes
+			prepare_cyborg_species = yes
 			change_species = event_target:prepared_species
 			fire_on_action = {
 				on_action = on_leader_species_changed
@@ -95,7 +95,7 @@ country_event = {
 				}
 			}
 			save_event_target_as = previous_leader_species
-			dm_prepare_cyborg_species = yes
+			prepare_cyborg_species = yes
 			change_species = event_target:prepared_species
 			fire_on_action = {
 				on_action = on_leader_species_changed
@@ -112,7 +112,7 @@ country_event = {
 				}
 			}
 			save_event_target_as = previous_leader_species
-			dm_prepare_cyborg_species = yes
+			prepare_cyborg_species = yes
 			change_species = event_target:prepared_species
 			fire_on_action = {
 				on_action = on_leader_species_changed
@@ -145,8 +145,283 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = utopia.2501.a
+	}
+}
+
+# Modified:
+# * do no convert already-existing synthetics into the changed species
+# * do not convert species to synthetics if they already have other ascension-related traits (players can choose to manually set them to assimilate if desired)
+# * fire the Organic Zealots "we hate you now and sever diplomatic ties" event regardless of whether the target country is an AI player, if Civic: Organic Zealots is active
+country_event = {
+	id = utopia.2551
+	title = utopia.2551.name
+	desc = utopia.2551.desc
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_synthetic_evolution
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = synthetic_empire
+		if = {
+			limit = { has_policy_flag = robots_outlawed }
+			set_policy = {
+				policy = robot_pop_policy
+				option = robot_pops_allowed
+				cooldown = yes
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_policy_flag = ai_servitude
+					has_policy_flag = ai_outlawed
+				}
+			}
+			set_policy = {
+				policy = artificial_intelligence_policy
+				option = ai_full_rights
+				cooldown = yes
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					is_active_resolution = resolution_divinity_silence_the_soulless
+					is_active_resolution = resolution_divinity_a_defined_purpose
+				}
+			}
+			owner = {
+				set_timed_country_flag = {
+					flag = resolution_breached_synthetic_evolution
+					days = 3600
+				}
+			}
+		}
+
+		give_technology = {
+			tech = tech_bio_reactor
+			message = no
+		}
+
+		create_species = {
+			is_mod = yes
+			name = this
+			namelist = this
+			plural = this
+			class = ROBOT
+			homeworld = root.species
+			portrait = default_robot
+			traits = {
+				trait = trait_mechanical
+			}
+			effect = {
+				if = { limit = { has_synthethic_dawn = yes }
+					prev = {
+						switch = {
+							trigger = is_species_class
+							HUM = { prev = { change_species_characteristics = { portrait = "sd_hum_robot" } } }
+							MAM = { prev = { change_species_characteristics = { portrait = "sd_mam_robot" } } }
+							REP = { prev = { change_species_characteristics = { portrait = "sd_rep_robot" } } }
+							AVI = { prev = { change_species_characteristics = { portrait = "sd_avi_robot" } } }
+							ART = { prev = { change_species_characteristics = { portrait = "sd_art_robot" } } }
+							MOL = { prev = { change_species_characteristics = { portrait = "sd_mol_robot" } } }
+							FUN = { prev = { change_species_characteristics = { portrait = "sd_fun_robot" } } }
+							PLANT = { prev = { change_species_characteristics = { portrait = "sd_pla_robot" } } }
+							LITHOID = { prev = { change_species_characteristics = { portrait = "lith_machine" } } }
+							NECROID = { prev = { change_species_characteristics = { portrait = "nec_machine" } } }
+							AQUATIC = { prev = { change_species_characteristics = { portrait = "aqu_machine" } } }
+							TOX = { prev = { change_species_characteristics = { portrait = "tox_machine" } } }
+						}
+					}
+				}
+				rename_species = {
+					prompt_country = root # If targeted country is a player they will get a popup asking for a name/plural/adjective combo. Otherwise the species will get a random name from the specified name_list
+					name_list = ascension_list
+				}
+				save_event_target_as = new_robotic_species
+			}
+		}
+		owner_species = { swap_species_traits_organic_to_robotic = yes }
+		every_owned_pop = {
+			limit = {
+				is_being_purged = no
+				species = {
+					has_any_ascension_species_traits = no
+					is_robotic = no
+					is_livestock = no
+				}
+			}
+			change_species = event_target:new_robotic_species
+		}
+		every_controlled_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				species = {
+					has_any_ascension_species_traits = no
+					is_robotic = no
+					is_livestock = no
+				}
+			}
+			change_species = event_target:new_robotic_species
+		}
+		every_owned_army = {
+			limit = {
+				exists = species
+				species = {
+					has_any_ascension_species_traits = no
+					is_robotic = no
+					is_livestock = no
+				}
+				army_type = assault_army
+			}
+			modify_army = {
+				name = random
+				type = robotic_army
+				species = event_target:new_robotic_species
+			}
+		}
+		every_owned_army = {
+			limit = {
+				exists = species
+				species = {
+					has_any_ascension_species_traits = no
+					is_robotic = no
+					is_livestock = no
+				}
+				army_type = defense_army
+			}
+			modify_army = {
+				name = random
+				type = robotic_defense_army
+				species = event_target:new_robotic_species
+			}
+		}
+		every_owned_leader = {
+			limit = {
+				species = {
+					has_any_ascension_species_traits = no
+					is_robotic = no
+					is_livestock = no
+				}
+			}
+			save_event_target_as = previous_leader_species
+			change_species = event_target:new_robotic_species
+			fire_on_action = {
+				on_action = on_leader_species_changed
+				scopes = {
+					from = event_target:previous_leader_species
+				}
+			}
+		}
+		every_pool_leader = {
+			limit = {
+				species = {
+					has_any_ascension_species_traits = no
+					is_robotic = no
+					is_livestock = no
+				}
+			}
+			save_event_target_as = previous_leader_species
+			change_species = event_target:new_robotic_species
+			fire_on_action = {
+				on_action = on_leader_species_changed
+				scopes = {
+					from = event_target:previous_leader_species
+				}
+			}
+		}
+		every_envoy = {
+			limit = {
+				species = {
+					has_any_ascension_species_traits = no
+					is_robotic = no
+					is_livestock = no
+				}
+			}
+			save_event_target_as = previous_leader_species
+			change_species = event_target:new_robotic_species
+			fire_on_action = {
+				on_action = on_leader_species_changed
+				scopes = {
+					from = event_target:previous_leader_species
+				}
+			}
+		}
+		change_dominant_species = { species = event_target:new_robotic_species }
+		# note: cybernetic leader traits are added by Leader Traits: All Eligible Species Traits
+
+		observer_event = {
+			id = observer.4
+		}
+		every_country = {
+			limit = {
+				NOT = { is_same_value = root }
+				has_communications = root
+			}
+			if = {
+				limit = { is_ai = no }
+				country_event = {
+					id = utopia.2555
+					days = 5
+				}
+				country_event = {
+					id = utopia.2556
+					days = 10
+				}
+			}
+			if = {
+				limit = { has_civic_organic_zealots_active = yes }
+				country_event = {
+					id = civic_organic_zealots.2554
+					days = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					is_fallen_empire_spiritualist = yes
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+			}
+			random_country = {
+				limit = {
+					is_fallen_empire_spiritualist = yes
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				country_event = {
+					id = utopia.2557
+					days = 15
+				}
+			}
+		}
+		else = {
+			random_country = {
+				limit = {
+					is_country_type = default
+					has_ethic = ethic_fanatic_spiritualist
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				country_event = {
+					id = utopia.2557
+					days = 15
+				}
+			}
+		}
+
+		root = { set_country_flag = synth_assimilation }
+	}
+	option = {
+		trigger = { is_homicidal = no }
+		name = utopia.2551.a
+		custom_tooltip = SYNTH_ASSIMILATION_CITIZENSHIP_ENABLED
+	}
+	option = {
+		trigger = { is_homicidal = yes }
+		name = utopia.2551.a
 	}
 }

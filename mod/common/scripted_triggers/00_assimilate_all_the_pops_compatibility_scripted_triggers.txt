@@ -14,6 +14,14 @@ has_deassimilate_machines_active = {
 
 ### Civic: Organic Zealots ###
 
+# check whether the species is undergoing cybernetic deassimilation
+# this = species (current)
+# prev = country (assimilator)
+coz_is_undergoing_assimilation_uncyborg_species = {
+	optimize_memory
+	always = no
+}
+
 # this = country
 is_organic_zealots = {
 	optimize_memory
@@ -22,6 +30,16 @@ is_organic_zealots = {
 
 # this = country
 is_valid_organic_zealots = {
+	optimize_memory
+	always = no
+}
+
+## Deassimilate Machines ##
+
+# check whether the species is undergoing machine deassimilation
+# this = species (current)
+# prev = country (assimilator)
+dm_is_undergoing_assimilation_unmachine_species = {
 	optimize_memory
 	always = no
 }

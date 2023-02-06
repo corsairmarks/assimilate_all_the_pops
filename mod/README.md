@@ -1,3 +1,5 @@
+**_IMPORTANT UPDATE:_** This mod no longer requires [Deassimilate Machines](https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372).
+
 # Overview
 
 Do you want to assimilate all your Pops in all the ways? Then this mod is for you!
@@ -16,9 +18,17 @@ Psionic traits are still incompatible with hive minds, as in the unmodded game.
 
 ## Compatibility
 
+Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
+
 This mod overrides the seven ascension path-related ascension perks. It is not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. It is also not compatible with mods that adjust the Synthetics, Cybernetics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible).
 
-Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
+Also overridden are some events and other game code related to implementing assimilation:
+
+* Event `action.64` - assimilation setup event, altered to ue triggers and effects (which themselves simply the game logic)
+* Event `action.65` - main assimilation event, altered to use less duplicate code and pass two variables to its effect calls - the current number of assimilated Pops and the total number allowed for the year
+* Event `utopia.2551` - Synthetic Evolution, altered to not change synthetic leaders of other species into the empire's main species (cyborgs are still fair game, however) and attempt to create an initial synthetic species with similar traits to the previous, organic species
+* Effect `assimilation_effect` - main assimilation logic (called by `action.65`), altered so that deassimilated machines are not converted into the synthetic species for fully synthetic empires, also code de-duped
+* Citizenship `citizenship_assimilation` - Assimilation, improved to understand that empires can have multiple assimilation types available
 
 Do you want this mod to be compatible with your favorite "more tradition slots" mod? Simply override the scripted variable `assimilate_all_the_pops_tradition_categories_max` and set it equal to the maximum number of tradition slots allowed by your other mod. Ascension perk tradition slot checks (i.e. "Requires an empty Tradition Tree slot.") in this mod will use that number.
 
@@ -32,37 +42,43 @@ This mod is intentionally not included in my modpack [Subtle Polish: A Collectio
 
 ### Required Mod Dependencies
 
-* [Deassimilate Machines](https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372) contains all the changes to the Assimilation citizenship type and assimilation process required to support multiple assimilation types in one empire
 * [Psionic Ascension: Even in Other Empires](https://steamcommunity.com/sharedfiles/filedetails/?id=2601239912) grants the Latent Psionic and Psionic traits to all members of a species (galaxy-wide) when their founding empire chooses Psionic ascension; works with this mod to allow cybernetic Pops to also gain psionic powers
 * [Leader Traits: All Eligible Species Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=2499031295) ensures that your leaders gain all applicable leader traits for any species traits their species possesses (such as Psionic, Cybernetic, and/or Erudite)
 
 ### Recommended Companion Mods
 
+* [Civic: Organic Zealots](https://steamcommunity.com/sharedfiles/filedetails/?id=2920668465) provides a brand-new homicidal civic that can interfere with cybernetic and synthetic assimilation, and all empires can now choose to remove cybernetic implants via a deassimilation process (with the right technologies)
+* [Deassimilate Machines](https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372) allows regular (non-hive) empires to deassimilate machines into robots
 * [Retain Leaders from Integrated Subjects](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684) allows you to retain leaders from integrated subjects and conquered/infiltrated primitives; works with this mod so retained leaders can have multiple assimilations applied to them
 
 ## Known Issues
 
-This mod overrides one event, seven ascension perks, and ten living standards from the base game. Expect to see eighteen lines in error.log like this:
+This mod overrides one effect, one species right, ten living standards, four events, and seven ascension perks from the base game. Expect to see 23 lines in error.log like these:
 
 ```
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_deassimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 9
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_ego_assimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 42
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_ego_assimilation_psionic already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 92
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_ego_assimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 130
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_ego_assimilation_psionic already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 187
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_tech_assimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 222
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_assimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 270
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_assimilation_psionic already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 310
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_psi_assimilation already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 340
-[08:19:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_psi_assimilation_cyborg already exists, using the one at file: common/species_rights/living_standards/10_assimilate_all_the_pops_living_standards.txt line: 377
-[08:19:34][eventmanager.cpp:368]: an event with id [utopia.2501] already exists!  file: events/utopia_on_action_events.txt line: 250
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_engineered_evolution already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 2
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_the_flesh_is_weak already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 50
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_organo_machine_interfacing already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 87
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_organo_machine_interfacing_assimilator already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 121
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_synthetic_evolution already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 158
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_mind_over_matter already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 234
-[08:19:37][game_singleobjectdatabase.h:165]: Object with key: ap_synthetic_age already exists, using the one at file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 279
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: assimilation_effect already exists, using the one at  file: common/scripted_effects/00_scripted_effects.txt line: 4978
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: citizenship_assimilation already exists, using the one at  file: common/species_rights/citizenship_types/30_assimilate_all_the_pops_citizenship_type_overrides.txt line: 7
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_deassimilation already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 12
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_ego_assimilation already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 45
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_ego_assimilation_psionic already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 90
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_ego_assimilation already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 136
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_ego_assimilation_psionic already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 220
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_tech_assimilation already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 258
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_assimilation already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 331
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_cyborg_assimilation_psionic already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 393
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_psi_assimilation already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 423
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_psi_assimilation_cyborg already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 461
+[04:00:34][eventmanager.cpp:368]: an event with id [action.64] already exists!  file: events/on_action_events_1.txt line: 7950
+[04:00:34][eventmanager.cpp:368]: an event with id [action.65] already exists!  file: events/on_action_events_1.txt line: 8187
+[04:00:34][eventmanager.cpp:368]: an event with id [utopia.2501] already exists!  file: events/utopia_on_action_events.txt line: 250
+[04:00:34][eventmanager.cpp:368]: an event with id [utopia.2551] already exists!  file: events/utopia_on_action_events.txt line: 825
+[04:00:36][game_singleobjectdatabase.h:165]: Object with key: ap_engineered_evolution already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 2
+[04:00:36][game_singleobjectdatabase.h:165]: Object with key: ap_the_flesh_is_weak already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 50
+[04:00:36][game_singleobjectdatabase.h:165]: Object with key: ap_organo_machine_interfacing already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 107
+[04:00:36][game_singleobjectdatabase.h:165]: Object with key: ap_organo_machine_interfacing_assimilator already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 160
+[04:00:36][game_singleobjectdatabase.h:165]: Object with key: ap_synthetic_evolution already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 197
+[04:00:36][game_singleobjectdatabase.h:165]: Object with key: ap_mind_over_matter already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 295
+[04:00:36][game_singleobjectdatabase.h:165]: Object with key: ap_synthetic_age already exists, using the one at  file: common/ascension_perks/assimilate_all_the_pops_ascension_path_overrides.txt line: 340
 ```
 
 ## Changelog
@@ -73,9 +89,10 @@ This mod overrides one event, seven ascension perks, and ten living standards fr
     * Consume the compatibility trigger from Civic: Organic Zealots
     * Remove old compatibility global flag
 * 2.0.1 Disallow "The Flesh is Weak" from being chosen multiple times
-* 2.1.0 Code cleanup - no mod feature changes
-    * Use triggers from Civic: Organic Zealots
-    * Reuse code from Deassimilate Machines rather than duplicating it
+* 3.0.0 Remove dependency on Deassimilate Machines
+    * Assimilation overhaul now lives in this mod
+    * Use triggers and effects from Civic: Organic Zealots, when it is also active
+    * Use triggers and effects from Deassimilate Machines, when it is also active
 
 ## Source Code
 
