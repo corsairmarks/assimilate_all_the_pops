@@ -218,47 +218,6 @@ citizenship_assimilation = {
 		else_if = {
 			limit = { from = { is_gestalt = no } }
 			OR = {
-				# machine deassimilation
-				if = {
-					limit = { has_deassimilate_machines_active = yes }
-					from = {
-						has_technology = tech_sapient_ai
-						custom_tooltip = {
-							fail_text = UNMACHINE_SPECIES_MUST_BE_MACHINE
-							prev = { has_trait = trait_machine_unit }
-						}
-						custom_tooltip = {
-							fail_text = ROBOTS_ARE_ALLOWED
-							has_policy_flag = robots_allowed
-						}
-						custom_tooltip = {
-							fail_text = AI_IS_ALLOWED
-							NOT = { has_policy_flag = ai_outlawed }
-						}
-						if = {
-							limit = {
-								has_civic_organic_zealots_active = yes
-								has_technology = tech_sapient_ai
-							}
-							custom_tooltip = {
-								fail_text = lost_robot_policy_war_fail
-								NOT = { has_country_flag = lost_robot_policy_war }
-							}
-							custom_tooltip = {
-								fail_text = civic_tooltip_not_organic_zealots_fail
-								is_valid_organic_zealots = no
-							}
-							custom_tooltip = {
-								fail_text = civic_tooltip_overlord_not_organic_zealots_fail
-								NAND = {
-									is_subject = yes
-									exists = overlord
-									overlord = { is_valid_organic_zealots = yes }
-								}
-							}
-						}
-					}
-				}
 				# synthetic assimilation (regular)
 				from = {
 					has_country_flag = synth_assimilation
@@ -282,22 +241,6 @@ citizenship_assimilation = {
 								exists = overlord
 								overlord = { is_valid_organic_zealots = yes }
 							}
-						}
-					}
-				}
-				# cybernetic deassimilation
-				if = {
-					limit = { has_civic_organic_zealots_active = yes }
-					from = {
-						has_technology = tech_gene_tailoring
-						has_technology = tech_gene_banks
-						custom_tooltip = {
-							fail_text = UNCYBORG_SPECIES_MUST_BE_CYBORG
-							prev = { has_trait = trait_cybernetic }
-						}
-						custom_tooltip = {
-							fail_text = UNCYBORG_SPECIES_CANT_BE_HIVE
-							prev = { NOT = { has_trait = trait_hive_mind } }
 						}
 					}
 				}
@@ -359,6 +302,63 @@ citizenship_assimilation = {
 					custom_tooltip = {
 						fail_text = UNHIVE_SPECIES_MUST_BE_HIVE
 						prev = { has_trait = trait_hive_mind }
+					}
+				}
+				# cybernetic deassimilation
+				if = {
+					limit = { has_civic_organic_zealots_active = yes }
+					from = {
+						has_technology = tech_gene_tailoring
+						has_technology = tech_gene_banks
+						custom_tooltip = {
+							fail_text = UNCYBORG_SPECIES_MUST_BE_CYBORG
+							prev = { has_trait = trait_cybernetic }
+						}
+						custom_tooltip = {
+							fail_text = UNCYBORG_SPECIES_CANT_BE_HIVE
+							prev = { NOT = { has_trait = trait_hive_mind } }
+						}
+					}
+				}
+				# machine deassimilation
+				if = {
+					limit = { has_deassimilate_machines_active = yes }
+					from = {
+						has_technology = tech_sapient_ai
+						custom_tooltip = {
+							fail_text = UNMACHINE_SPECIES_MUST_BE_MACHINE
+							prev = { has_trait = trait_machine_unit }
+						}
+						custom_tooltip = {
+							fail_text = ROBOTS_ARE_ALLOWED
+							has_policy_flag = robots_allowed
+						}
+						custom_tooltip = {
+							fail_text = AI_IS_ALLOWED
+							NOT = { has_policy_flag = ai_outlawed }
+						}
+						if = {
+							limit = {
+								has_civic_organic_zealots_active = yes
+								has_technology = tech_sapient_ai
+							}
+							custom_tooltip = {
+								fail_text = lost_robot_policy_war_fail
+								NOT = { has_country_flag = lost_robot_policy_war }
+							}
+							custom_tooltip = {
+								fail_text = civic_tooltip_not_organic_zealots_fail
+								is_valid_organic_zealots = no
+							}
+							custom_tooltip = {
+								fail_text = civic_tooltip_overlord_not_organic_zealots_fail
+								NAND = {
+									is_subject = yes
+									exists = overlord
+									overlord = { is_valid_organic_zealots = yes }
+								}
+							}
+						}
 					}
 				}
 			}
