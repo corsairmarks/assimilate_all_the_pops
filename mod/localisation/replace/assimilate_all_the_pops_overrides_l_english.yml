@@ -19,12 +19,12 @@
  PSI_SPECIES_CANT_BE_HIVE: "Hive minds cannot develop psionic powers."
  UNHIVE_SPECIES_MUST_BE_HIVE: "Only organic §Y$trait_hive_mind$§! species can be de-assimilated."
 
- # localisation to make the game happy with the conditional content - matches localisation from  Civic: Organic Zealots so that it won't matter which mod loads first
+ # localisation to make the game happy with the conditional content
+ # matches localisation from Civic: Organic Zealots so that it won't matter which mod loads first
  civic_tooltip_not_organic_zealots_fail: "$TRIGGER_FAIL$$civic_tooltip_not_organic_zealots$"
  civic_tooltip_overlord_not_organic_zealots_fail: "$TRIGGER_FAIL$$civic_tooltip_overlord_not_organic_zealots$"
  lost_robot_policy_war_fail: "$TRIGGER_FAIL$$lost_robot_policy_war$"
-
- # localisation to make the game happy with the conditional content - matches localisation from  Deassimilate Machines so that it won't matter which mod loads first
+ # matches localisation from Deassimilate Machines so that it won't matter which mod loads first
  disconnected_machine_pops_collapse_citizenship_assimilation: "$disconnected_machine_pops_collapse_citizenship$ Unless they could be retrofitted with individual §Y$tech_sapient_ai$§!..."
  ROBOTS_ARE_ALLOWED: "Robots must be §Gallowed§!."
  ROBOTS_ARE_ALLOWED_FAIL: "$TRIGGER_FAIL$$ROBOTS_ARE_ALLOWED$"
@@ -36,3 +36,8 @@
  CYBORG_SPECIES_CANT_BE_CYBORG_FAIL: "$TRIGGER_FAIL$$CYBORG_SPECIES_CANT_BE_CYBORG$"
  HIVE_SPECIES_CANT_BE_HIVE: "Only organic non-§Y$trait_hive_mind$§! species can be connected to our Hive Mind."
  HIVE_SPECIES_CANT_BE_HIVE_FAIL: "$TRIGGER_FAIL$$HIVE_SPECIES_CANT_BE_HIVE$"
+ # matches localisation from Planetary Diversity so that it won't matter which mod loads first
+ origin_pd_shroud: "Shroud-Touched"
+ origin_pd_shroud_desc: "This civilization has evolved in a world at the edge of reality and a realm of psionic energy. Living at this weak point between the two worlds has granted an abilities some would consider unnatural."
+ origin_techno_world: "The Children of Unit 04"
+ origin_techno_world_desc: "This civilization was created by the rogue AI 'Unit 04'. Blending synthetic and organic life, it has created a new form of existence: Bio-Synthetics. Their creator watches them from afar, intervening only at important developmental moments."

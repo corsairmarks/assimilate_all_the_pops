@@ -17,7 +17,9 @@ Psionic traits are still incompatible with hive minds, as in the unmodded game.
 [h2]Compatibility[/h2]
 Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
-This mod overrides the seven ascension path-related ascension perks. It is not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. It is also not compatible with mods that adjust the Synthetics, Cybernetics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible).
+This mod overrides the seven ascension path-related ascension perks. It is generally not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. However, this mod features native support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1960179456]Planetary Diversity - Shroud Worlds[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1740165239]Planetary Diversity - Unique Worlds[/url].
+
+This mod is also not compatible with mods that adjust the Synthetics, Cybernetics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible). Note that is you are playing Origin: The Children of Unit 04 from Planetary Diversity - Unique Worlds, be sure to choose the Bio-Synthetics tradition group before selecting any of the assimilation-related tradition groups (you do not need to finish the group, just unlocking it first is sufficient).
 
 Also overridden are some events and other game code related to implementing assimilation:
 [list]

@@ -20,7 +20,9 @@ Psionic traits are still incompatible with hive minds, as in the unmodded game.
 
 Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
 
-This mod overrides the seven ascension path-related ascension perks. It is not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. It is also not compatible with mods that adjust the Synthetics, Cybernetics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible).
+This mod overrides the seven ascension path-related ascension perks. It is generally not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. However, this mod features native support for [Planetary Diversity - Shroud Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1960179456) and [Planetary Diversity - Unique Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1740165239).
+
+This mod is also not compatible with mods that adjust the Synthetics, Cybernetics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible). Note that is you are playing Origin: The Children of Unit 04 from Planetary Diversity - Unique Worlds, be sure to choose the Bio-Synthetics tradition group before selecting any of the assimilation-related tradition groups (you do not need to finish the group, just unlocking it first is sufficient).
 
 Also overridden are some events and other game code related to implementing assimilation:
 
@@ -93,6 +95,7 @@ This mod overrides one effect, one species right, ten living standards, four eve
     * Assimilation overhaul now lives in this mod
     * Use triggers and effects from Civic: Organic Zealots, when it is also active
     * Use triggers and effects from Deassimilate Machines, when it is also active
+    * Add compatibility for [Planetary Diversity - Shroud Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1960179456) and [Planetary Diversity - Unique Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1740165239)
 
 ## Source Code
 

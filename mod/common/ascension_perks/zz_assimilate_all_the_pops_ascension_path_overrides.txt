@@ -30,7 +30,10 @@ ap_engineered_evolution = {
 	}
 	potential = {
 		has_utopia = yes
-		NOT = { has_ascension_perk = ap_engineered_evolution }
+		NOR = {
+			has_ascension_perk = ap_engineered_evolution
+			has_origin = origin_techno_world # from PD: Unique Worlds
+		}
 		is_machine_empire = no
 	}
 	ai_weight = {
@@ -87,7 +90,10 @@ ap_the_flesh_is_weak = {
 	}
 	potential = {
 		has_utopia = yes
-		NOT = { has_ascension_perk = ap_the_flesh_is_weak }
+		NOR = {
+			has_ascension_perk = ap_the_flesh_is_weak
+			has_origin = origin_techno_world # from PD: Unique Worlds
+		}
 		is_gestalt = no
 	}
 	ai_weight = {
@@ -270,7 +276,10 @@ ap_synthetic_evolution = {
 	}
 	potential = {
 		has_utopia = yes
-		NOT = { has_ascension_perk = ap_synthetic_evolution }
+		NOR = {
+			has_ascension_perk = ap_synthetic_evolution
+			has_origin = origin_techno_world # from PD: Unique Worlds
+		}
 		is_gestalt = no
 		is_mechanical_empire = no
 	}
@@ -316,6 +325,8 @@ ap_mind_over_matter = {
 		NOR = {
 			has_ascension_perk = ap_mind_over_matter
 			has_origin = origin_shroudwalker_apprentice
+			has_origin = origin_pd_shroud
+			has_origin = origin_techno_world # from PD: Unique Worlds
 		}
 		is_gestalt = no
 	}
