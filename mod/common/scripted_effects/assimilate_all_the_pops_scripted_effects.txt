@@ -151,6 +151,10 @@ set_post_assimilation_minimum_living_standard_pop = {
 					country = owner
 				}
 				has_living_standard = {
+					type = living_standard_deassimilation_cyborg
+					country = owner
+				}
+				has_living_standard = {
 					type = living_standard_deassimilation_machine
 					country = owner
 				}
