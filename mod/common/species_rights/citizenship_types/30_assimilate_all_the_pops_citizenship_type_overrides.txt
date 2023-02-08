@@ -320,6 +320,9 @@ citizenship_assimilation = {
 						}
 					}
 				}
+				else = {
+					hidden_trigger = { always = no }
+				}
 				# machine deassimilation
 				if = {
 					limit = { has_deassimilate_machines_active = yes }
@@ -360,6 +363,9 @@ citizenship_assimilation = {
 							}
 						}
 					}
+				}
+				else = {
+					hidden_trigger = { always = no }
 				}
 			}
 		}
