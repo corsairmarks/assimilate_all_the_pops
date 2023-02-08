@@ -220,7 +220,14 @@ citizenship_assimilation = {
 			OR = {
 				# synthetic assimilation (regular)
 				from = {
-					has_country_flag = synth_assimilation
+					custom_tooltip = {
+						text = HAS_COMPLETED_SYNTHETIC_EVOLUTION_PROJECT # intentionally not fail_text
+						has_country_flag = synth_assimilation
+					}
+					custom_tooltip = {
+						fail_text = SYNTH_SPECIES_CANT_BE_HIVE
+						prev = { NOT = { has_trait = trait_hive_mind } }
+					}
 					if = {
 						limit = {
 							has_civic_organic_zealots_active = yes

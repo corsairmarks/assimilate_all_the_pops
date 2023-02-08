@@ -8,16 +8,18 @@
 
  # Mod Content
  SYNTH_SPECIES_MUST_BE_MACHINE: "Only §Y$trait_machine_unit$§! or §Y$trait_mechanical$§! species can be converted into our primary §Y$trait_machine_unit$§! species."
+ SYNTH_SPECIES_CANT_BE_HIVE: "Only non-§Y$trait_hive_mind$§! species can be converted into synthetics."
+ HAS_COMPLETED_SYNTHETIC_EVOLUTION_PROJECT: "Has completed special project §Y$SYNTHETIC_EVOLUTION_PROJECT$§!"
  CYBORG_SPECIES_CANT_BE_MACHINE: "Species may not be §Y$trait_machine_unit$§! or §Y$trait_mechanical$§!."
  CYBORG_SPECIES_CANT_BE_HIVE: "Without the §Y$tr_cybernetics_assimilator_inevitable_assimilation$§! Tradition, only non-§Y$trait_hive_mind$§! species can be assimilated into cyborgs."
  CYBORG_SPECIES_MUST_BE_FULL_ORGANIC: "Only fully §Yorganic§! species can be converted into cyborgs."
  CYBORG_SPECIES_CANT_BE_CYBORG_OR_MUST_BE_HIVE: "Only non-§Y$trait_cybernetic$§! species or §Y$trait_cybernetic$§! §Y$trait_hive_mind$§! species can be assimilated into cyborgs."
  UNCYBORG_SPECIES_MUST_BE_CYBORG: "Only §Y$trait_cybernetic$§! species can have their implants removed."
  UNCYBORG_SPECIES_CANT_BE_HIVE: "Removing §Y$trait_cybernetic$§! implants from §Y$trait_hive_mind$§! species does not grant them individuality."
- PSI_SPECIES_MUST_BE_ORGANIC: "Only organic species can develop psionic powers."
+ PSI_SPECIES_MUST_BE_ORGANIC: "Only §Yorganic§! species can develop psionic powers."
  PSI_SPECIES_IS_ALREADY_PSIONIC: "This species already has psionic powers."
  PSI_SPECIES_CANT_BE_HIVE: "Hive minds cannot develop psionic powers."
- UNHIVE_SPECIES_MUST_BE_HIVE: "Only organic §Y$trait_hive_mind$§! species can be de-assimilated."
+ UNHIVE_SPECIES_MUST_BE_HIVE: "Only organic, §Y$trait_hive_mind$§! species can be de-assimilated."
 
  # localisation to make the game happy with the conditional content
  # matches localisation from Civic: Organic Zealots so that it won't matter which mod loads first
