@@ -7,7 +7,7 @@ set_post_assimilation_minimum_citizenship_pop = {
 			type = citizenship_full_machine
 			country = owner
 		}
-		owner = { 
+		owner = {
 			if = {
 				limit = { has_valid_civic = civic_machine_assimilator }
 				if = {
@@ -432,7 +432,7 @@ prepare_psionic_species = {
 # event_target:new_robotic_species = used as the base species to be modified, will be overwritten with the new species if one or more traits are added
 swap_species_traits_organic_to_robotic = {
 	optimize_memory
-	# generally habitability, leader lifespan, and army traits are ignored, unless they had additional effects
+	# generally leader lifespan and army traits are ignored, unless they had additional effects
 	if = {
 		limit = {
 			OR = {
@@ -536,11 +536,11 @@ swap_species_traits_organic_to_robotic = {
 				has_trait = trait_advanced_budding
 				has_trait = trait_fertile
 				has_trait = trait_vat_grown
+				has_trait = trait_nivlac # also grants trait_robot_recycled
 				has_trait = trait_preplanned_growth
 				has_trait = trait_incubator
 				has_trait = trait_exotic_metabolism
 				has_trait = trait_tiyanki
-				has_trait = trait_nivlac
 			}
 		}
 		modify_species = {
@@ -553,7 +553,15 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_slow_breeders }
+		limit = {
+			OR = {
+				has_trait = trait_slow_breeders
+				AND = {
+					has_trait = trait_decadent
+					NOT = { event_target:new_robotic_species = { has_trait = trait_robot_mass_produced } }
+				}
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_custom_made
@@ -567,6 +575,8 @@ swap_species_traits_organic_to_robotic = {
 		limit = {
 			OR = {
 				has_trait = trait_conservational
+				has_trait = trait_strong
+				has_trait = trait_nomadic
 				has_trait = trait_cyborg_durable
 				has_trait = trait_low_maintenance
 			}
@@ -584,6 +594,8 @@ swap_species_traits_organic_to_robotic = {
 		limit = {
 			OR = {
 				has_trait = trait_wasteful
+				has_trait = trait_weak
+				has_trait = trait_sedentary
 				has_trait = trait_cyborg_high_maintenance
 				has_trait = trait_cyborg_power_intensive
 			}
@@ -762,6 +774,31 @@ swap_species_traits_organic_to_robotic = {
 	if = {
 		limit = {
 			OR = {
+				has_trait = trait_adaptive
+				has_trait = trait_adaptive_lithoid
+				has_trait = trait_extremely_adaptive
+				has_trait = trait_nivlac # also grants trait_robot_mass_produced
+				has_trait = trait_robust # also grants trait_robot_efficient_processors
+				has_trait = trait_spliced_adaptability
+				has_trait = trait_excessive_endurance
+				has_trait = trait_noxious
+				has_trait = trait_voidling
+			}
+			NOT = { event_target:new_robotic_species = { has_trait = trait_robot_luxurious } }
+		}
+		modify_species = {
+			species = event_target:new_robotic_species
+			add_trait = trait_robot_recycled
+			change_scoped_species = no
+			effect = {
+				save_event_target_as = new_robotic_species
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_trait = trait_syncretic_proles
 				has_trait = trait_conformists
 				has_trait = trait_cyborg_loyalty_circuits
 			}
@@ -779,7 +816,7 @@ swap_species_traits_organic_to_robotic = {
 		limit = {
 			OR = {
 				has_trait = trait_very_strong
-				has_trait = trait_robust
+				has_trait = trait_robust # also grants trait_robot_recycled
 				has_trait = trait_cyborg_efficient_processors
 				has_trait = trait_excessive_endurance
 			}
