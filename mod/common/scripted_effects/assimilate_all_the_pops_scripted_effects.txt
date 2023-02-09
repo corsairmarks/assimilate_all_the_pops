@@ -432,8 +432,15 @@ prepare_psionic_species = {
 # event_target:new_robotic_species = used as the base species to be modified, will be overwritten with the new species if one or more traits are added
 swap_species_traits_organic_to_robotic = {
 	optimize_memory
+	# generally habitability, leader lifespan, and army traits are ignored, unless they had additional effects
 	if = {
-		limit = { has_trait = trait_agrarian }
+		limit = {
+			OR = {
+				has_trait = trait_agrarian
+				has_trait = trait_cyborg_harvesters
+				has_trait = trait_farm_hands
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_harvesters
@@ -444,7 +451,13 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_ingenious }
+		limit = {
+			OR = {
+				has_trait = trait_ingenious
+				has_trait = trait_cyborg_superconductive
+				has_trait = trait_crack_miner
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_superconductive
@@ -455,7 +468,13 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_industrious }
+		limit = {
+			OR = {
+				has_trait = trait_industrious
+				has_trait = trait_cyborg_power_drills
+				has_trait = trait_technical_skill
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_power_drills
@@ -466,7 +485,21 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_intelligent }
+		limit = {
+			OR = {
+				has_trait = trait_intelligent
+				has_trait = trait_natural_physicists
+				has_trait = trait_natural_sociologists
+				has_trait = trait_natural_engineers
+				has_trait = trait_enigmatic_intelligence
+				has_trait = trait_enigmatic_intelligence_poor
+				has_trait = trait_cyborg_logic_engines
+				has_trait = trait_brainslug
+				has_trait = trait_erudite
+				has_trait = trait_artificial_intelligence
+				has_trait = trait_elevated_synapses
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_logic_engines
@@ -477,7 +510,13 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_thrifty }
+		limit = {
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_cyborg_trading_algorithms
+				has_trait = trait_nuumismatic_administration
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_trading_algorithms
@@ -494,7 +533,14 @@ swap_species_traits_organic_to_robotic = {
 				has_trait = trait_rapid_breeders_lithoid
 				has_trait = trait_plantoid_budding
 				has_trait = trait_lithoid_budding
+				has_trait = trait_advanced_budding
 				has_trait = trait_fertile
+				has_trait = trait_vat_grown
+				has_trait = trait_preplanned_growth
+				has_trait = trait_incubator
+				has_trait = trait_exotic_metabolism
+				has_trait = trait_tiyanki
+				has_trait = trait_nivlac
 			}
 		}
 		modify_species = {
@@ -518,7 +564,13 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_conservational }
+		limit = {
+			OR = {
+				has_trait = trait_conservational
+				has_trait = trait_cyborg_durable
+				has_trait = trait_low_maintenance
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_durable
@@ -529,7 +581,13 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_wasteful }
+		limit = {
+			OR = {
+				has_trait = trait_wasteful
+				has_trait = trait_cyborg_high_maintenance
+				has_trait = trait_cyborg_power_intensive
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_high_maintenance
@@ -540,7 +598,12 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_talented }
+		limit = {
+			OR = {
+				has_trait = trait_talented
+				has_trait = trait_cyborg_enhanced_memory
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_enhanced_memory
@@ -551,7 +614,13 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_quick_learners }
+		limit = {
+			OR = {
+				has_trait = trait_quick_learners
+				has_trait = trait_cyborg_learning_algorithms
+				has_trait = trait_gene_mentorship
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_learning_algorithms
@@ -562,7 +631,12 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_slow_learners }
+		limit = {
+			OR = {
+				has_trait = trait_slow_learners
+				has_trait = trait_cyborg_neural_limiters
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_repurposed_hardware
@@ -573,7 +647,12 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_traditional }
+		limit = {
+			OR = {
+				has_trait = trait_traditional
+				has_trait = trait_expressed_tradition
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_propaganda_machines
@@ -584,7 +663,12 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_docile }
+		limit = {
+			OR = {
+				has_trait = trait_docile
+				has_trait = trait_cyborg_streamlined_protocols
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_streamlined_protocols
@@ -595,7 +679,12 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_unruly }
+		limit = {
+			OR = {
+				has_trait = trait_unruly
+				has_trait = trait_cyborg_high_bandwidth
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_high_bandwidth
@@ -606,7 +695,12 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_communal }
+		limit = {
+			OR = {
+				has_trait = trait_communal
+				has_trait = trait_cyborg_double_jointed
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_double_jointed
@@ -617,7 +711,12 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_solitary }
+		limit = {
+			OR = {
+				has_trait = trait_solitary
+				has_trait = trait_cyborg_bulky
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_bulky
@@ -628,7 +727,12 @@ swap_species_traits_organic_to_robotic = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_charismatic }
+		limit = {
+			OR = {
+				has_trait = trait_charismatic
+				has_trait = trait_crafted_smiles
+			}
+		}
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_domestic_protocols
@@ -642,13 +746,47 @@ swap_species_traits_organic_to_robotic = {
 		limit = {
 			OR = {
 				has_trait = trait_nonadaptive
-				has_trait = trait_repugnant
+				has_trait = trait_repugnant # trait_robot_uncanny is MACHINE only
 			}
 		}
 		# no direct equivalent, but luxurious at least refunds the same amount of points
 		modify_species = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_luxurious
+			change_scoped_species = no
+			effect = {
+				save_event_target_as = new_robotic_species
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_trait = trait_conformists
+				has_trait = trait_cyborg_loyalty_circuits
+			}
+		}
+		modify_species = {
+			species = event_target:new_robotic_species
+			add_trait = trait_robot_loyalty_circuits
+			change_scoped_species = no
+			effect = {
+				save_event_target_as = new_robotic_species
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_trait = trait_very_strong
+				has_trait = trait_robust
+				has_trait = trait_cyborg_efficient_processors
+				has_trait = trait_excessive_endurance
+			}
+		}
+		modify_species = {
+			species = event_target:new_robotic_species
+			add_trait = trait_robot_efficient_processors
 			change_scoped_species = no
 			effect = {
 				save_event_target_as = new_robotic_species
