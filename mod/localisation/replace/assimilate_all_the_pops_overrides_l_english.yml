@@ -45,5 +45,3 @@
  # matches localisation from Planetary Diversity so that it won't matter which mod loads first
  origin_pd_shroud: "Shroud-Touched"
  origin_pd_shroud_desc: "This civilization has evolved in a world at the edge of reality and a realm of psionic energy. Living at this weak point between the two worlds has granted an abilities some would consider unnatural."
- origin_techno_world: "The Children of Unit 04"
- origin_techno_world_desc: "This civilization was created by the rogue AI 'Unit 04'. Blending synthetic and organic life, it has created a new form of existence: Bio-Synthetics. Their creator watches them from afar, intervening only at important developmental moments."

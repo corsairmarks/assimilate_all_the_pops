@@ -4,10 +4,3 @@ origin_pd_shroud = {
 	icon = gfx/interface/icons/origins/origins_default.dds
 	potential = { always = no }
 }
-
-# Dummy for Planetary Diversity - Unique Worlds (https://steamcommunity.com/sharedfiles/filedetails/?id=1740165239)
-origin_techno_world = {
-	is_origin = yes
-	icon = gfx/interface/icons/origins/origins_default.dds
-	potential = { always = no }
-}
