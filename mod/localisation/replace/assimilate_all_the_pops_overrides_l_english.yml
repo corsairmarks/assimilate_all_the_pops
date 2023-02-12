@@ -5,6 +5,7 @@
  living_standard_tech_assimilation: "Transubstantiation Synthesis ($trait_robotic_3$)"
  living_standard_cyborg_assimilation: "Transubstantiation Synthesis ($trait_cybernetic$)"
  living_standard_cyborg_assimilation_psionic: "$living_standard_cyborg_assimilation$"
+ effect_random_owned_pop_species: "$effect_random_owned_species$"
 
  # Mod Content
  SYNTH_SPECIES_MUST_BE_MACHINE: "Only §Y$trait_machine_unit$§! or §Y$trait_mechanical$§! species can be converted into our primary §Y$trait_machine_unit$§! species."

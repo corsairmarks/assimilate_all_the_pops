@@ -5,3 +5,4 @@
  living_standard_tech_assimilation: "Синтез превращения ($trait_robotic_3$)"
  living_standard_cyborg_assimilation: "Синтез превращения ($trait_cybernetic$)"
  living_standard_cyborg_assimilation_psionic: "$living_standard_cyborg_assimilation$"
+ effect_random_owned_pop_species: "$effect_random_owned_species$"
