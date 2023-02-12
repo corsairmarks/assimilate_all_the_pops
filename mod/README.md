@@ -96,6 +96,10 @@ This mod overrides one effect, one species right, ten living standards, four eve
     * Use triggers and effects from Civic: Organic Zealots, when it is also active
     * Use triggers and effects from Deassimilate Machines, when it is also active
     * Add compatibility for [Planetary Diversity - Shroud Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1960179456) and [Planetary Diversity - Unique Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1740165239)
+* 3.0.1 Bugfixes from 3.0.0 overhaul
+    * Properly allow cybernetic and synthetic assimilation when Civic: Organic Zealots is not active
+    * Ensure that completing the Flesh Is Weak special project does not create two templates for your main species, and that it properly combines with Latent Psionic/Psionic of those traits were gained at approximately the same time
+    * Fix compatibility with Planetary Diversity - Unique Worlds (was barring Bio-Synthetics from any assimilation, when instead they are allowed to have access to all types)
 
 ## Source Code
 
