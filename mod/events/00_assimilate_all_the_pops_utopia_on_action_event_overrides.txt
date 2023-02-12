@@ -16,31 +16,39 @@ country_event = {
 		if = {
 			limit = {
 				owner_species = {
-					is_robotic = no
 					NOT = { has_trait = trait_cybernetic }
+					is_robotic = no
+					count_species_pop = {
+						count > 0
+						limit = { is_owned_by = root }
+					}
 				}
-				any_owned_pop_species = { is_exact_same_species = root.owner_species }
 			}
-			random_owned_species = {
-				limit = { is_exact_same_species = root.owner_species }
-				prepare_cyborg_species = yes
-				event_target:prepared_species = { save_event_target_as = cybernetic_species }
-			}
+			owner_species = { save_event_target_as = previous_owner_species }
 		}
 		else = {
-			random_owned_species = {
+			random_owned_pop_species = {
 				limit = {
 					is_same_species = root.owner_species
-					is_robotic = no
 					NOT = { has_trait = trait_cybernetic }
+					is_robotic = no
 				}
-				prepare_cyborg_species = yes
-				event_target:prepared_species = { save_event_target_as = cybernetic_species }
+				save_event_target_as = previous_owner_species
 			}
+		}
+		# previous owner species has special handling in case the owner_species was changed within a game-day or so,
+		# meaning the species caches haven't refreshed, which can lead to things like not properly applying both psionic and cybernetic traits to the same species
+		event_target:previous_owner_species = {
+			prepare_cyborg_species = yes
+			aatp_convert_species = yes
+			event_target:prepared_species = { save_event_target_as = cybernetic_species }
 		}
 		every_owned_pop_species = {
 			limit = {
-				NOT = { has_trait = trait_cybernetic }
+				NOR = {
+					is_exact_same_species = event_target:previous_owner_species
+					has_trait = trait_cybernetic
+				}
 				is_robotic = no
 			}
 			prepare_cyborg_species = yes
