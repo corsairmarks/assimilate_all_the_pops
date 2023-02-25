@@ -1,0 +1,16 @@
+# Modified:
+# * optimize memory
+# * use trigger for utopia
+# * machine empires with biological Pops can harvest
+# * allow harvesting regardless of ascension paths (why would an empire just forget how?)
+can_harvest_dna = {
+	optimize_memory
+	has_technology = tech_gene_tailoring
+	# Genetic ascension requires Utopia
+	has_utopia = yes
+	OR = {
+		is_machine_empire = no
+		has_valid_civic = civic_machine_assimilator
+		has_valid_civic = civic_machine_servitor
+	}
+}
