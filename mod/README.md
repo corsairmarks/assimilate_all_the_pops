@@ -55,9 +55,10 @@ This mod is intentionally not included in my modpack [Subtle Polish: A Collectio
 
 ## Known Issues
 
-This mod overrides one effect, one species right, ten living standards, four events, and seven ascension perks from the base game. Expect to see 23 lines in error.log like these:
+This mod overrides one effect, one trigger, one species right, ten living standards, four events, and seven ascension perks from the base game. Expect to see 24 lines in error.log like these:
 
 ```
+[04:00:32][game_singleobjectdatabase.h:165]: Object with key: can_harvest_dna already exists, using the one at  file: common/scripted_triggers/10_assimilate_all_the_pops_scripted_trigger_overrides.txt line: 6
 [04:00:32][game_singleobjectdatabase.h:165]: Object with key: assimilation_effect already exists, using the one at  file: common/scripted_effects/00_scripted_effects.txt line: 4978
 [04:00:32][game_singleobjectdatabase.h:165]: Object with key: citizenship_assimilation already exists, using the one at  file: common/species_rights/citizenship_types/30_assimilate_all_the_pops_citizenship_type_overrides.txt line: 7
 [04:00:32][game_singleobjectdatabase.h:165]: Object with key: living_standard_deassimilation already exists, using the one at  file: common/species_rights/living_standards/20_assimilate_all_the_pops_living_standard_overrides.txt line: 12

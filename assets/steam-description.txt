@@ -49,7 +49,7 @@ This mod is intentionally not included in my modpack [url=https://steamcommunity
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684]Retain Leaders from Integrated Subjects[/url] allows you to retain leaders from integrated subjects and conquered/infiltrated primitives; works with this mod so retained leaders can have multiple assimilations applied to them
 [/list]
 [h2]Known Issues[/h2]
-This mod overrides one effect, one species right, ten living standards, four events, and seven ascension perks from the base game. Expect to see 23 lines in error.log describing these overrides.
+This mod overrides one effect, one trigger, one species right, ten living standards, four events, and seven ascension perks from the base game. Expect to see 24 lines in error.log describing these overrides.
 
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2908463208]Change Notes[/url]
