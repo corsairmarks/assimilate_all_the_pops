@@ -2,5 +2,7 @@
 origin_pd_shroud = {
 	is_origin = yes
 	icon = gfx/interface/icons/origins/origins_default.dds
-	potential = { always = no }
+	playable = { always = no }
+	ai_playable = { always = no }
+	random_weight = { base = 0 }
 }
