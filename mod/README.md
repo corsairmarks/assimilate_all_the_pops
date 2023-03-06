@@ -102,6 +102,7 @@ This mod overrides one effect, one trigger, one species right, ten living standa
     * Ensure that completing the Flesh Is Weak special project does not create two templates for your main species, and that it properly combines with Latent Psionic/Psionic of those traits were gained at approximately the same time
     * Fix compatibility with Planetary Diversity - Unique Worlds (was barring Bio-Synthetics from any assimilation, when instead they are allowed to have access to all types)
 * 3.1.0 Allow empires that take a non-Genetics ascension, Driven Assimilators, and Rogue Servitors to harvest genetic material - thanks [wagnerleung0079](https://steamcommunity.com/profiles/76561198261183621) for reporting this game restriction
+* 3.1.1 Bugfixes: reduce error logs, ensure dummy origin is not playable
 
 ## Source Code
 
