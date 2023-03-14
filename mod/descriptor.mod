@@ -1,4 +1,4 @@
-name="Assimilate All the Pops"
+name="Assimilate All the Pops!"
 dependencies={
 	"Leader Traits: All Eligible Species Traits"
 	"Psionic Ascension: Even in Other Empires"
