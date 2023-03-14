@@ -141,15 +141,31 @@ country_event = {
 		observer_event = {
 			id = observer.55
 		}
-		every_country = {
+		if = {
+			limit = { is_primitive = no }
+			every_country = {
+				limit = {
+					is_ai = no
+					NOT = { is_same_value = root }
+					has_communications = root
+				}
+				country_event = {
+					id = utopia.2505
+					days = 5
+				}
+			}
+		}
+		if = {
 			limit = {
-				is_ai = no
-				NOT = { is_same_value = root }
-				has_communications = root
+				any_planet_within_border = {
+					has_planet_flag = fotd_seperatist_planet@root
+					owner = { has_country_flag = fotd_seperatist_country@root }
+				}
 			}
 			country_event = {
-				id = utopia.2505
+				id = origin.6095
 				days = 5
+				random = 2
 			}
 		}
 	}
@@ -421,7 +437,20 @@ country_event = {
 			}
 		}
 
-		root = { set_country_flag = synth_assimilation }
+		set_country_flag = synth_assimilation
+		if = {
+			limit = {
+				any_planet_within_border = {
+					has_planet_flag = fotd_seperatist_planet@root
+					owner = { has_country_flag = fotd_seperatist_country@root }
+				}
+			}
+			country_event = {
+				id = origin.6095
+				days = 5
+				random = 2
+			}
+		}
 	}
 	option = {
 		trigger = { is_homicidal = no }
