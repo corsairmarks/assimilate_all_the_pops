@@ -18,7 +18,7 @@ Psionic traits are still incompatible with hive minds, as in the unmodded game.
 
 ## Compatibility
 
-Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor." Not compatible with achievements.
 
 This mod overrides the seven ascension path-related ascension perks. It is generally not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. However, this mod features native support for [Planetary Diversity - Shroud Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1960179456) and [Planetary Diversity - Unique Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1740165239).
 
@@ -103,6 +103,7 @@ This mod overrides one effect, one trigger, one species right, ten living standa
     * Fix compatibility with Planetary Diversity - Unique Worlds (was barring Bio-Synthetics from any assimilation, when instead they are allowed to have access to all types)
 * 3.1.0 Allow empires that take a non-Genetics ascension, Driven Assimilators, and Rogue Servitors to harvest genetic material - thanks [wagnerleung0079](https://steamcommunity.com/profiles/76561198261183621) for reporting this game restriction
 * 3.1.1 Bugfixes: reduce error logs, ensure dummy origin is not playable
+* 4.0.0 Update for Stellaris version 3.7 "Canis Minor" - integrate underlying game changes
 
 ## Source Code
 

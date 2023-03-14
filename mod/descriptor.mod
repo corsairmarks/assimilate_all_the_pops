@@ -9,7 +9,7 @@ tags={
 	"Gameplay"
 	"Species"
 }
-version="3.1.1"
+version="4.0.0"
 picture="thumbnail.png"
-supported_version="3.6.*"
+supported_version="3.7.*"
 remote_file_id="2908463208"
