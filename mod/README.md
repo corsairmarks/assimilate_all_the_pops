@@ -20,7 +20,7 @@ Built for Stellaris version 3.7 "Canis Minor." Not compatible with achievements.
 
 This mod overrides the seven ascension path-related ascension perks. It is generally not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. However, this mod features native support for [Planetary Diversity - Shroud Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1960179456) and [Planetary Diversity - Unique Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1740165239).
 
-This mod is also not compatible with mods that adjust the Synthetics, Cybernetics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible). Note that is you are playing Origin: The Children of Unit 04 from Planetary Diversity - Unique Worlds, be sure to choose the Bio-Synthetics tradition group before selecting any of the assimilation-related tradition groups (you do not need to finish the group, just unlocking it first is sufficient).
+This mod is also not compatible with mods that adjust the Synthetics, Cybernetics, Psionics, or Genetics tradition categories (changes to individual tradition choices are compatible). Note that if you are playing Origin: The Children of Unit 04 from Planetary Diversity - Unique Worlds, be sure to choose the Bio-Synthetics tradition group before selecting any of the assimilation-related tradition groups (you do not need to finish the group, just unlocking it first is sufficient).
 
 Also overridden are some events and other game code related to implementing assimilation:
 
@@ -30,7 +30,7 @@ Also overridden are some events and other game code related to implementing assi
 * Effect `assimilation_effect` - main assimilation logic (called by `action.65`), altered so that deassimilated machines are not converted into the synthetic species for fully synthetic empires, also code de-duped
 * Citizenship `citizenship_assimilation` - Assimilation, improved to understand that empires can have multiple assimilation types available
 
-Do you want this mod to be compatible with your favorite "more tradition slots" mod? Simply override the scripted variable `assimilate_all_the_pops_tradition_categories_max` and set it equal to the maximum number of tradition slots allowed by your other mod. Ascension perk tradition slot checks (i.e. "Requires an empty Tradition Tree slot.") in this mod will use that number.
+Do you want this mod to be compatible with your favorite "more tradition slots" mod? Simply override the scripted variable `assimilate_all_the_pops_tradition_categories_max` and set it equal to the maximum number of tradition slots allowed by your other mod. Ascension perk tradition slot checks (i.e. "Requires an empty Tradition Tree slot.") in this mod will use that number.  Support for [UI Overhaul Dynamic](https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360) and its Tradition/Ascension Perk slot submods is already built-in.
 
 ### When to Install
 
@@ -102,6 +102,7 @@ This mod overrides one effect, one trigger, one species right, ten living standa
 * 3.1.0 Allow empires that take a non-Genetics ascension, Driven Assimilators, and Rogue Servitors to harvest genetic material - thanks [wagnerleung0079](https://steamcommunity.com/profiles/76561198261183621) for reporting this game restriction
 * 3.1.1 Bugfixes: reduce error logs, ensure dummy origin is not playable
 * 4.0.0 Update for Stellaris version 3.7 "Canis Minor" - integrate underlying game changes
+* 4.1.0 Natively support UIOD Tradition/Ascension Perk slot submods
 
 ## Source Code
 
