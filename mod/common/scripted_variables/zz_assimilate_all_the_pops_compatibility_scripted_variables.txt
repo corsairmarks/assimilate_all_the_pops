@@ -1,0 +1,2 @@
+# This variable supports UI Overhaul Dynamic's tradition slot increases - it will be preempted by the correct value if a UIOD tradition submod is active
+@UIOD_TRADITION_CATEGORIES_MAX = 7
