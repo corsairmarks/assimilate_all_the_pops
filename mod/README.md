@@ -1,5 +1,3 @@
-**_IMPORTANT UPDATE:_** This mod no longer requires [Deassimilate Machines](https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372).
-
 # Overview
 
 Do you want to assimilate all your Pops in all the ways? Then this mod is for you!
