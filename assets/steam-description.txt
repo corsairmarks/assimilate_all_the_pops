@@ -33,7 +33,7 @@ Do you want this mod to be compatible with your favorite "more tradition slots" 
 This mod can be added before or during a game. The new rules for allowing multiple "ascension path" ascension perks will take effect immediately, even for empires which have already chosen an ascension path. It is not recommended to remove during a game, as it could cause problems that have selected multiple ascension perks which are incompatible without this mod. Always back up your savegame before trying to remove a mod.
 
 [h3]Not Included in "Subtle Polish"[/h3]
-This mod is intentionally not included in my modpack [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089]Subtle Polish: A Collection of Fixes and Enhancements[/url] because it contains a significant gameplay change. It is otherwise fully compatible.
+This mod is intentionally not included in my modpack [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089]Subtle Polish: A Collection of Fixes and Enhancements[/url] because it contains a significant gameplay change. It is otherwise fully compatible. Also note that Subtle Polish contains both required dependencies - you do not need to subscribe to them separately.
 
 [h3]Required Mod Dependencies[/h3]
 [list]
@@ -44,7 +44,7 @@ This mod is intentionally not included in my modpack [url=https://steamcommunity
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2920668465]Civic: Organic Zealots[/url] provides a brand-new homicidal civic that can interfere with cybernetic and synthetic assimilation, and all empires can now choose to remove cybernetic implants via a deassimilation process (with the right technologies)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372]Deassimilate Machines[/url] contains all the changes to the Assimilation citizenship type and assimilation process required to support multiple assimilation types in one empire
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684]Retain Leaders from Integrated Subjects[/url] allows you to retain leaders from integrated subjects and conquered/infiltrated primitives; works with this mod so retained leaders can have multiple assimilations applied to them
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684]Retain Leaders from Integrated Subjects & Pre-FTL Civilizations[/url] works with this mod apply multiple assimilations to retained leaders if your empire has access to more than one (e.g. Psionic and Cybernetic)
 [/list]
 [h2]Known Issues[/h2]
 This mod overrides one effect, one trigger, one species right, ten living standards, four events, and seven ascension perks from the base game. Expect to see 24 lines in error.log describing these overrides.

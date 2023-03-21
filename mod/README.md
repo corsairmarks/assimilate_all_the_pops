@@ -38,7 +38,7 @@ This mod can be added before or during a game. The new rules for allowing multip
 
 ### Not Included in "Subtle Polish"
 
-This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089) because it contains a significant gameplay change. It is otherwise fully compatible.
+This mod is intentionally not included in my modpack [Subtle Polish: A Collection of Fixes and Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2522974089) because it contains a significant gameplay change. It is otherwise fully compatible. Also note that Subtle Polish contains both required dependencies - you do not need to subscribe to them separately.
 
 ### Required Mod Dependencies
 
@@ -49,7 +49,7 @@ This mod is intentionally not included in my modpack [Subtle Polish: A Collectio
 
 * [Civic: Organic Zealots](https://steamcommunity.com/sharedfiles/filedetails/?id=2920668465) provides a brand-new homicidal civic that can interfere with cybernetic and synthetic assimilation, and all empires can now choose to remove cybernetic implants via a deassimilation process (with the right technologies)
 * [Deassimilate Machines](https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372) allows regular (non-hive) empires to deassimilate machines into robots
-* [Retain Leaders from Integrated Subjects](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684) allows you to retain leaders from integrated subjects and conquered/infiltrated primitives; works with this mod so retained leaders can have multiple assimilations applied to them
+* [Retain Leaders from Integrated Subjects & Pre-FTL Civilizations](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684) works with this mod apply multiple assimilations to retained leaders if your empire has access to more than one (e.g. Psionic and Cybernetic)
 
 ## Known Issues
 
