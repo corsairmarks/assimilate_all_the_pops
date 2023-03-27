@@ -28,6 +28,7 @@ ap_engineered_evolution = {
 			OR = { # chooses the highest limit
 				num_tradition_categories < @assimilate_all_the_pops_tradition_categories_max
 				num_tradition_categories < @UIOD_TRADITION_CATEGORIES_MAX
+				num_tradition_categories < @TRADITION_CATEGORIES_MAX
 			}
 		}
 	}
@@ -69,6 +70,7 @@ ap_the_flesh_is_weak = {
 			OR = { # chooses the highest limit
 				num_tradition_categories < @assimilate_all_the_pops_tradition_categories_max
 				num_tradition_categories < @UIOD_TRADITION_CATEGORIES_MAX
+				num_tradition_categories < @TRADITION_CATEGORIES_MAX
 			}
 		}
 		if = {
@@ -129,6 +131,7 @@ ap_organo_machine_interfacing = {
 			OR = { # chooses the highest limit
 				num_tradition_categories < @assimilate_all_the_pops_tradition_categories_max
 				num_tradition_categories < @UIOD_TRADITION_CATEGORIES_MAX
+				num_tradition_categories < @TRADITION_CATEGORIES_MAX
 			}
 		}
 		if = {
@@ -188,6 +191,7 @@ ap_organo_machine_interfacing_assimilator = {
 			OR = { # chooses the highest limit
 				num_tradition_categories < @assimilate_all_the_pops_tradition_categories_max
 				num_tradition_categories < @UIOD_TRADITION_CATEGORIES_MAX
+				num_tradition_categories < @TRADITION_CATEGORIES_MAX
 			}
 		}
 	}
@@ -256,6 +260,7 @@ ap_synthetic_evolution = {
 			OR = { # chooses the highest limit
 				num_tradition_categories < @assimilate_all_the_pops_tradition_categories_max
 				num_tradition_categories < @UIOD_TRADITION_CATEGORIES_MAX
+				num_tradition_categories < @TRADITION_CATEGORIES_MAX
 			}
 		}
 		if = {
@@ -321,6 +326,7 @@ ap_mind_over_matter = {
 			OR = { # chooses the highest limit
 				num_tradition_categories < @assimilate_all_the_pops_tradition_categories_max
 				num_tradition_categories < @UIOD_TRADITION_CATEGORIES_MAX
+				num_tradition_categories < @TRADITION_CATEGORIES_MAX
 			}
 		}
 	}
@@ -378,6 +384,7 @@ ap_synthetic_age = {
 			OR = { # chooses the highest limit
 				num_tradition_categories < @assimilate_all_the_pops_tradition_categories_max
 				num_tradition_categories < @UIOD_TRADITION_CATEGORIES_MAX
+				num_tradition_categories < @TRADITION_CATEGORIES_MAX
 			}
 		}
 	}

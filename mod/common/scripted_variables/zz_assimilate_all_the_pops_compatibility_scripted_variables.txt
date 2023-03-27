@@ -1,2 +1,9 @@
+
+
 # This variable supports UI Overhaul Dynamic's tradition slot increases - it will be preempted by the correct value if a UIOD tradition submod is active
+# https://steamcommunity.com/workshop/filedetails/?id=1623423360
 @UIOD_TRADITION_CATEGORIES_MAX = 7
+
+# This variable supports Scripted Trigger Undercoat's tradition slot increases - it will be preempted by the correct value by most other mods that support STU when active
+# https://steamcommunity.com/sharedfiles/filedetails/?id=2868680633
+@TRADITION_CATEGORIES_MAX = 7
