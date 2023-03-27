@@ -30,7 +30,7 @@ Also overridden are some events and other game code related to implementing assi
 * Effect `assimilation_effect` - main assimilation logic (called by `action.65`), altered so that deassimilated machines are not converted into the synthetic species for fully synthetic empires, also code de-duped
 * Citizenship `citizenship_assimilation` - Assimilation, improved to understand that empires can have multiple assimilation types available
 
-Do you want this mod to be compatible with your favorite "more tradition slots" mod? Simply override the scripted variable `assimilate_all_the_pops_tradition_categories_max` and set it equal to the maximum number of tradition slots allowed by your other mod. Ascension perk tradition slot checks (i.e. "Requires an empty Tradition Tree slot.") in this mod will use that number.  Support for [UI Overhaul Dynamic](https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360) and its Tradition/Ascension Perk slot submods is already built-in.
+Do you want this mod to be compatible with your favorite "more tradition slots" mod? Simply override the scripted variable `assimilate_all_the_pops_tradition_categories_max` and set it equal to the maximum number of tradition slots allowed by your other mod. Ascension perk tradition slot checks (i.e. "Requires an empty Tradition Tree slot.") in this mod will use that number.  Support for [UI Overhaul Dynamic](https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360) and its Tradition/Ascension Perk slot submods is already built-in.  Also supports the tradition variable from [Scripted Trigger Undercoat](https://steamcommunity.com/sharedfiles/filedetails/?id=2868680633) but does not offer full support for other features of STU.
 
 ### When to Install
 
@@ -102,7 +102,8 @@ This mod overrides one effect, one trigger, one species right, ten living standa
 * 3.1.0 Allow empires that take a non-Genetics ascension, Driven Assimilators, and Rogue Servitors to harvest genetic material - thanks [wagnerleung0079](https://steamcommunity.com/profiles/76561198261183621) for reporting this game restriction
 * 3.1.1 Bugfixes: reduce error logs, ensure dummy origin is not playable
 * 4.0.0 Update for Stellaris version 3.7 "Canis Minor" - integrate underlying game changes
-* 4.1.0 Natively support UIOD Tradition/Ascension Perk slot submods
+* 4.1.0 Natively support UIOD Tradition/Ascension Perk slot variable submods
+* 4.2.0 Natively support the Scripted Trigger Undercoat Tradition/Ascension Perk slot variable
 
 ## Source Code
 
