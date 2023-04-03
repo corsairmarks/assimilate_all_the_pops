@@ -86,7 +86,7 @@ living_standard_ego_assimilation = {
 
 # Modified:
 # * use triggers
-# * potetnial non-hive-minded
+# * potential non-hive-minded
 living_standard_ego_assimilation_psionic = {
 	in_breach_of = {
 		{
