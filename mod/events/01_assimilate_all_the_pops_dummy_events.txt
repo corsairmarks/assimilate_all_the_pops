@@ -1,3 +1,5 @@
+# Irony this is a placeholder file please ignore it
+
 namespace = civic_organic_zealots
 
 country_event = {

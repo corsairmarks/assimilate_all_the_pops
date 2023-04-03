@@ -1,3 +1,5 @@
+# Irony this is a placeholder file please ignore it
+
 # Dummy for Planetary Diversity - Shroud Worlds (https://steamcommunity.com/sharedfiles/filedetails/?id=1960179456)
 origin_pd_shroud = {
 	is_origin = yes

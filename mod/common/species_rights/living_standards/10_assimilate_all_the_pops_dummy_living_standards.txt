@@ -1,3 +1,5 @@
+# Irony this is a placeholder file please ignore it
+
 # dummy living standard so I don't spam the error log when Civic: Organic Zealots is not installed
 living_standard_deassimilation_cyborg = {
 	pop_modifier = {}

@@ -1,3 +1,5 @@
+# Irony this is a placeholder file please ignore it
+
 # supports features from my mod Civic: Organic Zealots
 # this = any
 has_civic_organic_zealots_active = {
@@ -34,7 +36,7 @@ is_valid_organic_zealots = {
 	always = no
 }
 
-## Deassimilate Machines ##
+### Deassimilate Machines ###
 
 # check whether the species is undergoing machine deassimilation
 # this = species (current)
