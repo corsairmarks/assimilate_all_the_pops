@@ -43,7 +43,7 @@ This mod is intentionally not included in my modpack [url=https://steamcommunity
 [h3]Recommended Companion Mods[/h3]
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2920668465]Civic: Organic Zealots[/url] provides a brand-new homicidal civic that can interfere with cybernetic and synthetic assimilation, and all empires can now choose to remove cybernetic implants via a deassimilation process (with the right technologies)
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372]Deassimilate Machines[/url] contains all the changes to the Assimilation citizenship type and assimilation process required to support multiple assimilation types in one empire
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553812372]Deassimilate Machines[/url] allows regular (non-hive) empires to deassimilate machines into robots
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684]Retain Leaders from Integrated Subjects & Pre-FTL Civilizations[/url] works with this mod apply multiple assimilations to retained leaders if your empire has access to more than one (e.g. Psionic and Cybernetic)
 [/list]
 [h2]Known Issues[/h2]
