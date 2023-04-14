@@ -195,7 +195,6 @@ living_standard_cyborg_ego_assimilation = {
 				from = { 
 					NAND = {
 						is_subject = yes
-						exists = overlord
 						overlord = { is_valid_organic_zealots = yes }
 					}
 				}
@@ -311,7 +310,6 @@ living_standard_tech_assimilation = {
 				from = { 
 					NAND = {
 						is_subject = yes
-						exists = overlord
 						overlord = { is_valid_organic_zealots = yes }
 					}
 				}
@@ -368,7 +366,6 @@ living_standard_cyborg_assimilation = {
 				from = { 
 					NAND = {
 						is_subject = yes
-						exists = overlord
 						overlord = { is_valid_organic_zealots = yes }
 					}
 				}

@@ -87,7 +87,6 @@ ap_the_flesh_is_weak = {
 				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
 				NAND = {
 					is_subject = yes
-					exists = overlord
 					overlord = { is_valid_organic_zealots = yes }
 				}
 			}
@@ -148,7 +147,6 @@ ap_organo_machine_interfacing = {
 				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
 				NAND = {
 					is_subject = yes
-					exists = overlord
 					overlord = { is_valid_organic_zealots = yes }
 				}
 			}
@@ -277,7 +275,6 @@ ap_synthetic_evolution = {
 				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
 				NAND = {
 					is_subject = yes
-					exists = overlord
 					overlord = { is_valid_organic_zealots = yes }
 				}
 			}
