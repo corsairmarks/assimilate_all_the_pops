@@ -75,21 +75,7 @@ ap_the_flesh_is_weak = {
 		}
 		if = {
 			limit = { has_civic_organic_zealots_active = yes }
-			custom_tooltip = {
-				fail_text = "lost_robot_policy_war_fail"
-				NOT = { has_country_flag = lost_robot_policy_war }
-			}
-			custom_tooltip = {
-				fail_text = "civic_tooltip_not_organic_zealots_fail"
-				is_valid_organic_zealots = no
-			}
-			custom_tooltip = {
-				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
-				NAND = {
-					is_subject = yes
-					overlord = { is_valid_organic_zealots = yes }
-				}
-			}
+			is_not_restricted_by_organic_zealots_fail = yes
 		}
 	}
 	potential = {
@@ -135,21 +121,7 @@ ap_organo_machine_interfacing = {
 		}
 		if = {
 			limit = { has_civic_organic_zealots_active = yes }
-			custom_tooltip = {
-				fail_text = "lost_robot_policy_war_fail"
-				NOT = { has_country_flag = lost_robot_policy_war }
-			}
-			custom_tooltip = {
-				fail_text = "civic_tooltip_not_organic_zealots_fail"
-				is_valid_organic_zealots = no
-			}
-			custom_tooltip = {
-				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
-				NAND = {
-					is_subject = yes
-					overlord = { is_valid_organic_zealots = yes }
-				}
-			}
+			is_not_restricted_by_organic_zealots_fail = yes
 		}
 	}
 	potential = {
@@ -263,21 +235,7 @@ ap_synthetic_evolution = {
 		}
 		if = {
 			limit = { has_civic_organic_zealots_active = yes }
-			custom_tooltip = {
-				fail_text = "lost_robot_policy_war_fail"
-				NOT = { has_country_flag = lost_robot_policy_war }
-			}
-			custom_tooltip = {
-				fail_text = "civic_tooltip_not_organic_zealots_fail"
-				is_valid_organic_zealots = no
-			}
-			custom_tooltip = {
-				fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
-				NAND = {
-					is_subject = yes
-					overlord = { is_valid_organic_zealots = yes }
-				}
-			}
+			is_not_restricted_by_organic_zealots_fail = yes
 		}
 	}
 	potential = {

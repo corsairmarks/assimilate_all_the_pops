@@ -36,6 +36,27 @@ is_valid_organic_zealots = {
 	always = no
 }
 
+# does not include TRIGGER_FAIL
+# this = country
+is_not_restricted_by_organic_zealots = {
+	optimize_memory
+	always = no
+}
+
+# includes TRIGGER_FAIL
+# this = country
+is_not_restricted_by_organic_zealots_fail = {
+	optimize_memory
+	always = no
+}
+
+# includes TRIGGER_FAIL, triggers checked against the from scope
+# this = country
+is_not_restricted_by_organic_zealots_fail_from = {
+	optimize_memory
+	always = no
+}
+
 ### Deassimilate Machines ###
 
 # check whether the species is undergoing machine deassimilation

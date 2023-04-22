@@ -236,6 +236,7 @@ citizenship_assimilation = {
 						fail_text = SYNTH_SPECIES_CANT_BE_HIVE
 						prev = { NOT = { has_trait = trait_hive_mind } }
 					}
+					# note - tooltips won't generate as desired (depth limit?) if I nest the C:OZ checks inside and if block or a scripted_trigger
 					custom_tooltip = {
 						fail_text = lost_robot_policy_war
 						OR = {

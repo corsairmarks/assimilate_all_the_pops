@@ -25,11 +25,8 @@
  # localisation to make the game happy with the conditional content
  # matches localisation from Civic: Organic Zealots so that it won't matter which mod loads first
  civic_tooltip_not_organic_zealots: "Does NOT have §Y$civic_organic_zealots$§! Civic"
- civic_tooltip_not_organic_zealots_fail: "$TRIGGER_FAIL$$civic_tooltip_not_organic_zealots$"
  civic_tooltip_overlord_not_organic_zealots: "Overlord does NOT have §Y$civic_organic_zealots$§! Civic"
- civic_tooltip_overlord_not_organic_zealots_fail: "$TRIGGER_FAIL$$civic_tooltip_overlord_not_organic_zealots$"
  lost_robot_policy_war: "Recently lost an $casus_belli_cb_impose_policy$ war that outlawed $tradition_cybernetics$, $policy_robot_pop_policy$, and $policy_artificial_intelligence_policy$"
- lost_robot_policy_war_fail: "$TRIGGER_FAIL$$lost_robot_policy_war$"
  # matches localisation from Deassimilate Machines so that it won't matter which mod loads first
  disconnected_machine_pops_collapse_citizenship_assimilation: "$disconnected_machine_pops_collapse_citizenship$ Unless they could be retrofitted with individual §Y$tech_sapient_ai$§!..."
  ROBOTS_ARE_ALLOWED: "Robots must be §Gallowed§!."
