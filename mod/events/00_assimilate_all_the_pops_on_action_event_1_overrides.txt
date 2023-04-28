@@ -11,6 +11,7 @@ event = {
 		any_playable_country = {
 			num_unique_species > 1
 			any_owned_pop_species = {
+				count_species_pop = { count > 0 }
 				has_citizenship_type = {
 					type = citizenship_assimilation
 					country = prev
@@ -21,20 +22,22 @@ event = {
 	immediate = {
 		log = "action.64"
 		set_update_modifiers_batch = begin
-        every_playable_country = {
-            limit = {
-                num_unique_species > 1
-                any_owned_pop_species = {
-                    has_citizenship_type = {
+		every_playable_country = {
+			limit = {
+				num_unique_species > 1
+				any_owned_pop_species = {
+					count_species_pop = { count > 0 }
+					has_citizenship_type = {
 						type = citizenship_assimilation
 						country = prev
-                    }
-                }
-            }
+					}
+				}
+			}
 			save_event_target_as = assimilating_country
 			log = "action.64.every_playable_country: [assimilating_country.GetRealName]"
 			every_owned_pop_species = {
 				limit = {
+					count_species_pop = { count > 0 }
 					has_citizenship_type = {
 						type = citizenship_assimilation
 						country = prev
@@ -59,15 +62,15 @@ event = {
 					prepare_psionic_species = yes
 				}
 			}
-            every_owned_planet = {
+			every_owned_planet = {
 				log = "action.64.every_owned_planet: [This.GetName]"
-                planet_event = {
+				planet_event = {
 					id = action.65
 				}
-            }
-        }
+			}
+		}
 		set_update_modifiers_batch = end
-    }
+	}
 }
 
 # Modified:
