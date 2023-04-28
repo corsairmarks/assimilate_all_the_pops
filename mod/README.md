@@ -106,6 +106,7 @@ This mod overrides one effect, one trigger, one species right, ten living standa
 * 4.2.0 Natively support the Scripted Trigger Undercoat Tradition/Ascension Perk slot variable
 * 4.3.0 Update for Stellaris version 3.7.4 "Canis Minor" - allow homicidal empires to assimilate their main species
 * 4.4.0 Improve compatibility with [Civic: Organic Zealots](https://steamcommunity.com/sharedfiles/filedetails/?id=2920668465)
+* 4.4.1 Performance improvements for assimilation - only process species which have at least one Pop
 
 ## Source Code
 
