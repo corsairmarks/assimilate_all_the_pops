@@ -49,6 +49,17 @@ country_event = {
 					is_exact_same_species = event_target:previous_owner_species
 					has_trait = trait_cybernetic
 				}
+				OR = {
+					has_tradition = tr_genetics_creation
+					AND = {
+						prev = { is_hive_empire = no }
+						NOT = { has_trait = trait_hive_mind }
+					}
+					AND = {
+						prev = { is_hive_empire = yes }
+						has_trait = trait_hive_mind
+					}
+				}
 				is_robotic = no
 			}
 			prepare_cyborg_species = yes
@@ -80,6 +91,10 @@ country_event = {
 		}
 		every_owned_leader = {
 			limit = {
+				NOR = {
+					has_leader_flag = renowned_leader
+					has_leader_flag = legendary_leader
+				}
 				species = {
 					NOT = { has_trait = trait_cybernetic }
 					is_robotic = no
@@ -137,6 +152,24 @@ country_event = {
 			change_dominant_species = { species = event_target:cybernetic_species }
 		}
 		# note: cybernetic leader traits are added by Leader Traits: All Eligible Species Traits
+		create_message = {
+			type = MESSAGE_ALL_GAINED_TRAIT
+			localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+			days = @toast_message_days
+			variable = {
+				type = key
+				value = leader_trait_cyborg
+				localization = TRAIT
+			}
+			variable = {
+				key = TRAIT_KEY
+				value = leader_trait_cyborg
+			}
+			variable = {
+				key = "border"
+				value = "GFX_invisible"
+			}
+		}
 
 		observer_event = {
 			id = observer.55
@@ -166,6 +199,17 @@ country_event = {
 				id = origin.6095
 				days = 5
 				random = 2
+			}
+		}
+
+		if = {
+			limit = { is_gestalt = yes }
+			every_owned_leader = {
+				limit = {
+					is_councilor = yes
+					is_ruler = no
+				}
+				set_gestalt_node_protrait_effect = yes
 			}
 		}
 	}
@@ -323,6 +367,10 @@ country_event = {
 		}
 		every_owned_leader = {
 			limit = {
+				NOR = {
+					has_leader_flag = renowned_leader
+					has_leader_flag = legendary_leader
+				}
 				species = {
 					has_any_ascension_species_traits = no
 					is_robotic = no
@@ -374,6 +422,24 @@ country_event = {
 		}
 		change_dominant_species = { species = event_target:new_robotic_species }
 		# note: cybernetic leader traits are added by Leader Traits: All Eligible Species Traits
+		create_message = {
+			type = MESSAGE_ALL_GAINED_TRAIT
+			localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+			days = @toast_message_days
+			variable = {
+				type = key
+				value = leader_trait_synthetic
+				localization = TRAIT
+			}
+			variable = {
+				key = TRAIT_KEY
+				value = leader_trait_synthetic
+			}
+			variable = {
+				key = "border"
+				value = "GFX_invisible"
+			}
+		}
 
 		observer_event = {
 			id = observer.4

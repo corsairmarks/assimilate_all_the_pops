@@ -858,7 +858,13 @@ aatp_convert_species = {
 			change_species = event_target:prepared_species
 		}
 		every_owned_leader = {
-			limit = { is_exact_same_species = prevprev }
+			limit = {
+				NOR = {
+					has_leader_flag = renowned_leader
+					has_leader_flag = legendary_leader
+				}
+				is_exact_same_species = prevprev
+			}
 			change_species = event_target:prepared_species
 			fire_on_action = {
 				on_action = on_leader_species_changed
