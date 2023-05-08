@@ -16,7 +16,7 @@ Psionic traits are still incompatible with hive minds, as in the unmodded game.
 
 ## Compatibility
 
-Built for Stellaris version 3.7 "Canis Minor." Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini." Not compatible with achievements.
 
 This mod overrides the seven ascension path-related ascension perks. It is generally not compatible with other mods that alter Synthetic Evolution, Synthetic Age, The Flesh is Weak, Organo-Machine Interfacing (both versions), Mind Over Matter, and Engineered Evolution. However, this mod features native support for [Planetary Diversity - Shroud Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1960179456) and [Planetary Diversity - Unique Worlds](https://steamcommunity.com/sharedfiles/filedetails/?id=1740165239).
 
@@ -107,6 +107,7 @@ This mod overrides one effect, one trigger, one species right, ten living standa
 * 4.3.0 Update for Stellaris version 3.7.4 "Canis Minor" - allow homicidal empires to assimilate their main species
 * 4.4.0 Improve compatibility with [Civic: Organic Zealots](https://steamcommunity.com/sharedfiles/filedetails/?id=2920668465)
 * 4.4.1 Performance improvements for assimilation - only process species which have at least one Pop
+* 5.0.0 Update for Stellaris version 3.8 "Gemini" - integrate underlying game changes
 
 ## Source Code
 
