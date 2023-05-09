@@ -50,7 +50,7 @@ country_event = {
 					has_trait = trait_cybernetic
 				}
 				OR = {
-					has_tradition = tr_genetics_creation
+					prev = { has_tradition = tr_genetics_creation }
 					AND = {
 						prev = { is_hive_empire = no }
 						NOT = { has_trait = trait_hive_mind }
