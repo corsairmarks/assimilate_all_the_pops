@@ -405,6 +405,10 @@ country_event = {
 		}
 		every_envoy = {
 			limit = {
+				NOR = {
+					has_leader_flag = renowned_leader
+					has_leader_flag = legendary_leader
+				}
 				species = {
 					has_any_ascension_species_traits = no
 					is_robotic = no
@@ -421,7 +425,7 @@ country_event = {
 			}
 		}
 		change_dominant_species = { species = event_target:new_robotic_species }
-		# note: cybernetic leader traits are added by Leader Traits: All Eligible Species Traits
+		# note: synthetic leader traits are added by Leader Traits: All Eligible Species Traits
 		create_message = {
 			type = MESSAGE_ALL_GAINED_TRAIT
 			localization = MESSAGE_ALL_GAINED_TRAIT_DESC
@@ -440,7 +444,6 @@ country_event = {
 				value = "GFX_invisible"
 			}
 		}
-
 		observer_event = {
 			id = observer.4
 		}
@@ -502,12 +505,12 @@ country_event = {
 				}
 			}
 		}
-
 		set_country_flag = synth_assimilation
 		if = {
 			limit = {
 				any_planet_within_border = {
 					has_planet_flag = fotd_seperatist_planet@root
+					exists = owner
 					owner = { has_country_flag = fotd_seperatist_country@root }
 				}
 			}
@@ -519,12 +522,10 @@ country_event = {
 		}
 	}
 	option = {
-		trigger = { is_homicidal = no }
 		name = utopia.2551.a
-		custom_tooltip = SYNTH_ASSIMILATION_CITIZENSHIP_ENABLED
-	}
-	option = {
-		trigger = { is_homicidal = yes }
-		name = utopia.2551.a
+		if = {
+			limit = { is_homicidal = no }
+			custom_tooltip = SYNTH_ASSIMILATION_CITIZENSHIP_ENABLED
+		}
 	}
 }
