@@ -11,7 +11,6 @@
 # * potential hive-minded
 living_standard_deassimilation = {
 	pop_modifier = { }
-
 	potential = {
 		has_utopia = yes
 		is_robotic = no
@@ -22,7 +21,6 @@ living_standard_deassimilation = {
 			has_tradition = tr_genetics_creation
 		}
 	}
-
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
@@ -33,10 +31,7 @@ living_standard_deassimilation = {
 			}
 		}
 	}
-
-	ai_will_do = {
-		factor = 100
-	}
+	ai_will_do = { factor = 100 }
 }
 
 # Modified:
@@ -51,11 +46,9 @@ living_standard_ego_assimilation = {
 			key = resolution_greatergood_universal_prosperity_mandate
 		}
 	}
-
 	pop_modifier = {
 		pop_happiness = -0.50
 	}
-
 	potential = {
 		has_psionic_species_trait = no
 		is_robotic = no
@@ -67,7 +60,6 @@ living_standard_ego_assimilation = {
 			has_tradition = tr_genetics_creation
 		}
 	}
-
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
@@ -78,10 +70,7 @@ living_standard_ego_assimilation = {
 			}
 		}
 	}
-
-	ai_will_do = {
-		factor = 100
-	}
+	ai_will_do = { factor = 100 }
 }
 
 # Modified:
@@ -96,11 +85,9 @@ living_standard_ego_assimilation_psionic = {
 			key = resolution_greatergood_universal_prosperity_mandate
 		}
 	}
-
 	pop_modifier = {
 		pop_happiness = -0.50
 	}
-
 	potential = {
 		has_psionic_species_trait = yes
 		is_robotic = no
@@ -112,7 +99,6 @@ living_standard_ego_assimilation_psionic = {
 			has_tradition = tr_genetics_creation
 		}
 	}
-
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
@@ -123,10 +109,7 @@ living_standard_ego_assimilation_psionic = {
 			}
 		}
 	}
-
-	ai_will_do = {
-		factor = 100
-	}
+	ai_will_do = { factor = 100 }
 }
 
 # Modified:
@@ -142,11 +125,9 @@ living_standard_cyborg_ego_assimilation = {
 			key = resolution_greatergood_universal_prosperity_mandate
 		}
 	}
-
 	pop_modifier = {
 		pop_happiness = -0.50
 	}
-
 	potential = {
 		is_robotic = no
 		exists = from
@@ -170,7 +151,6 @@ living_standard_cyborg_ego_assimilation = {
 			}
 		}
 	}
-
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
@@ -185,7 +165,6 @@ living_standard_cyborg_ego_assimilation = {
 			is_not_restricted_by_organic_zealots_fail_from = yes
 		}
 	}
-
 	ai_will_do = {
 		factor = 100
 		modifier = {
@@ -209,15 +188,10 @@ living_standard_cyborg_ego_assimilation_psionic = {
 			key = resolution_greatergood_universal_prosperity_mandate
 		}
 	}
-
 	pop_modifier = {
 		pop_happiness = -0.50
 	}
-
-	potential = {
-		always = no
-	}
-
+	potential = { always = no }
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
@@ -228,10 +202,7 @@ living_standard_cyborg_ego_assimilation_psionic = {
 			}
 		}
 	}
-
-	ai_will_do = {
-		factor = 0
-	}
+	ai_will_do = { factor = 0 }
 }
 
 # Modified:
@@ -242,7 +213,6 @@ living_standard_tech_assimilation = {
 	pop_modifier = {
 		pop_happiness = -0.25
 	}
-
 	potential = {
 		OR = {
 			has_utopia = yes
@@ -269,7 +239,6 @@ living_standard_tech_assimilation = {
 			}
 		}
 	}
-
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
@@ -284,10 +253,7 @@ living_standard_tech_assimilation = {
 			is_not_restricted_by_organic_zealots_fail_from = yes
 		}
 	}
-
-	ai_will_do = {
-		factor = 100
-	}
+	ai_will_do = { factor = 100 }
 }
 
 # Modified:
@@ -298,18 +264,19 @@ living_standard_cyborg_assimilation = {
 	pop_modifier = {
 		pop_happiness = -0.25
 	}
-
 	potential = {
 		has_utopia = yes
 		is_robotic = no
-		NOT = { has_trait = trait_cybernetic }
+		NOR = {
+			has_trait = trait_cybernetic
+			has_trait = trait_hive_mind # need to deassimilate first
+		}
 		exists = from
 		from = {
 			is_hive_empire = no
 			has_active_tradition = tr_cybernetics_transubstantiation_synthesis
 		}
 	}
-
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
@@ -324,7 +291,6 @@ living_standard_cyborg_assimilation = {
 			is_not_restricted_by_organic_zealots_fail_from = yes
 		}
 	}
-
 	ai_will_do = {
 		factor = 100
 		modifier = {
@@ -343,11 +309,7 @@ living_standard_cyborg_assimilation_psionic = {
 	pop_modifier = {
 		pop_happiness = -0.25
 	}
-
-	potential = {
-		always = no
-	}
-
+	potential = { always = no }
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
@@ -358,10 +320,7 @@ living_standard_cyborg_assimilation_psionic = {
 			}
 		}
 	}
-
-	ai_will_do = {
-		factor = 0
-	}
+	ai_will_do = { factor = 0 }
 }
 
 # Modified:
@@ -373,15 +332,16 @@ living_standard_psi_assimilation = {
 	pop_modifier = {
 		pop_happiness = -0.25
 	}
-
 	potential = {
 		has_utopia = yes
 		is_robotic = no
-		NOT = { has_trait = trait_psionic }
+		NOR = {
+			has_trait = trait_psionic
+			has_trait = trait_hive_mind # need to deassimilate first
+		}
 		exists = from
 		from = { has_tradition = tr_psionics_psionic_assimilation }
 	}
-
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
@@ -392,7 +352,6 @@ living_standard_psi_assimilation = {
 			}
 		}
 	}
-
 	ai_will_do = {
 		factor = 100
 		modifier = {
@@ -411,11 +370,7 @@ living_standard_psi_assimilation_cyborg = {
 	pop_modifier = {
 		pop_happiness = -0.25
 	}
-
-	potential = {
-		always = no
-	}
-
+	potential = { always = no }
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
@@ -426,8 +381,5 @@ living_standard_psi_assimilation_cyborg = {
 			}
 		}
 	}
-
-	ai_will_do = {
-		factor = 0
-	}
+	ai_will_do = { factor = 0 }
 }
