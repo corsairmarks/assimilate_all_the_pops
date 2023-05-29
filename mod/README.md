@@ -112,6 +112,7 @@ This mod overrides one effect, one trigger, one species right, ten living standa
     * Ensure Civic: Oppressive Autocracy assimilated species are set to Living Standard: Dystopian Society
     * Ensure legendary/renowned leaders are unaffected by the synthetic ascension event
     * Fix placeholder event from Civic: Organic Zealots
+* 5.0.2 Bugfix for Psionic assimilation for Pops that are Hive-Minded - they need to be Deassimilated first
 
 ## Source Code
 
