@@ -11,7 +11,7 @@ set_post_assimilation_minimum_citizenship_pop = {
 			if = {
 				limit = { has_valid_civic = civic_machine_assimilator }
 				if = {
-					limit = { NOT = { has_active_tradition = tr_cybernetics_assimilator_adopt } }
+					limit = { NOT = { has_tradition = tr_cybernetics_assimilator_adopt } }
 					generate_cyborg_treats = yes
 				}
 				else = {

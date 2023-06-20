@@ -136,7 +136,7 @@ living_standard_cyborg_ego_assimilation = {
 				AND = {
 					is_hive_empire = yes
 					NOT = { has_civic = civic_hive_devouring_swarm }
-					has_active_tradition = tr_cybernetics_transubstantiation_synthesis
+					has_tradition = tr_cybernetics_transubstantiation_synthesis
 					prev = {
 						NAND = {
 							has_trait = trait_hive_mind
@@ -271,7 +271,7 @@ living_standard_cyborg_assimilation = {
 		exists = from
 		from = {
 			is_hive_empire = no
-			has_active_tradition = tr_cybernetics_transubstantiation_synthesis
+			has_tradition = tr_cybernetics_transubstantiation_synthesis
 		}
 	}
 	allow = {
