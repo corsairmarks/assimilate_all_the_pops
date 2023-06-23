@@ -44,8 +44,11 @@ event = {
 					}
 				}
 				log = "action.64.every_owned_pop_species: [This.GetName]"
-				# synthetic assimilation deliberately does nothing here, see assimilation_effect
-				if = { # cybernetic assimilation
+				if = { # synthetic assimilation
+					limit = { is_undergoing_assimilation_synthetic_species = yes }
+					choose_synthetic_species = yes
+				}
+				else_if = { # cybernetic assimilation
 					limit = { is_undergoing_assimilation_cyborg_species = yes }
 					prepare_cyborg_species = yes
 				}
@@ -61,6 +64,7 @@ event = {
 					limit = { is_undergoing_assimilation_psionic_species = yes }
 					prepare_psionic_species = yes
 				}
+				# else another event better have set the right assimilation flags
 			}
 			every_owned_planet = {
 				log = "action.64.every_owned_planet: [This.GetName]"

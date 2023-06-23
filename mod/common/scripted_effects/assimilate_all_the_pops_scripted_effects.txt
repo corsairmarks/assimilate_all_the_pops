@@ -331,6 +331,32 @@ set_assimilation_flags = {
 	}
 }
 
+# select an existing species for synthetic assimilation
+# this = species
+# prev = country (assimilator)
+choose_synthetic_species = {
+	prev = {
+		if = {
+			limit = { owner_main_species = { is_robotic = yes } }
+			owner_main_species = { save_event_target_as = synthetic_species }
+		}
+		else = {
+			ordered_owned_pop_species = {
+				limit = {
+					is_robotic = yes
+					count_species_pop = { count > 0 }
+					is_same_species = owner_main_species
+					NOT = { is_exact_same_species = prevprev }
+				}
+				order_by = trigger:num_trait_points
+				position = 0
+				save_event_target_as = synthetic_species
+			}
+		}
+	}
+	event_target:synthetic_species = { set_assimilation_flags = yes }
+}
+
 # set up a species for cybernetic assimilation (non-hive), saved as event_target:prepared_species
 # this = species
 # prev = country (assimilator)
@@ -396,9 +422,7 @@ prepare_hive_species = {
 		remove_trait = trait_latent_psionic
 		remove_trait = trait_psionic
 		change_scoped_species = no
-		effect = {
-			set_assimilation_flags = yes
-		}
+		effect = { set_assimilation_flags = yes }
 	}
 }
 
@@ -412,9 +436,7 @@ prepare_unhive_species = {
 		remove_trait = trait_self_modified
 		remove_trait = trait_hive_mind
 		change_scoped_species = no
-		effect = {
-			set_assimilation_flags = yes
-		}
+		effect = { set_assimilation_flags = yes }
 	}
 }
 
@@ -430,9 +452,7 @@ prepare_psionic_species = {
 		remove_trait = trait_self_modified
 		remove_trait = trait_latent_psionic
 		change_scoped_species = no
-		effect = {
-			set_assimilation_flags = yes
-		}
+		effect = { set_assimilation_flags = yes }
 	}
 }
 
@@ -453,9 +473,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_harvesters
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -470,9 +488,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_superconductive
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -487,9 +503,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_power_drills
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -512,9 +526,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_logic_engines
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -529,9 +541,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_trading_algorithms
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -555,9 +565,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_mass_produced
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -574,9 +582,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_custom_made
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -593,9 +599,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_durable
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -612,9 +616,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_high_maintenance
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -628,9 +630,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_enhanced_memory
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -645,9 +645,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_learning_algorithms
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -661,9 +659,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_repurposed_hardware
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -677,9 +673,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_propaganda_machines
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -693,9 +687,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_streamlined_protocols
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -709,9 +701,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_high_bandwidth
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -725,9 +715,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_double_jointed
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -741,9 +729,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_bulky
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -757,9 +743,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_domestic_protocols
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -774,9 +758,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_luxurious
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -798,9 +780,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_recycled
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -815,9 +795,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_loyalty_circuits
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 	if = {
@@ -833,9 +811,7 @@ swap_species_traits_organic_to_robotic = {
 			species = event_target:new_robotic_species
 			add_trait = trait_robot_efficient_processors
 			change_scoped_species = no
-			effect = {
-				save_event_target_as = new_robotic_species
-			}
+			effect = { save_event_target_as = new_robotic_species }
 		}
 	}
 }

@@ -7,6 +7,16 @@ is_undergoing_assimilation_synthetic_species = {
 		type = living_standard_tech_assimilation
 		country = prev
 	}
+	OR = {
+		prev = { has_country_flag = synth_assimilation }
+		AND = {
+			is_robotic = yes
+			prev = {
+				is_machine_empire = yes
+				has_active_tradition = tr_synthetics_adopt_machine
+			}
+		}
+	}
 }
 
 # check whether the species is undergoing cybernetic assimilation (non-hive)
