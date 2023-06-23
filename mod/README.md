@@ -113,6 +113,7 @@ This mod overrides one effect, one trigger, one species right, ten living standa
     * Ensure legendary/renowned leaders are unaffected by the synthetic ascension event
     * Fix placeholder event from Civic: Organic Zealots
 * 5.0.2 Bugfix for Psionic assimilation for Pops that are Hive-Minded - they need to be Deassimilated first
+* 5.1.0 Enhance synthetic assimilation - select an alternate robotic species id the assimilator's main species is somehow not robotic (sorts by most trait points spent)
 
 ## Source Code
 
